@@ -1,0 +1,37 @@
+th.chTable{
+	border-top-color: #333333;
+	border-top-style: solid;
+	border-top-width: 0.5pt;
+	border-bottom-color: #333333;
+	border-bottom-style: solid;
+	border-bottom-width: 0.5pt;	
+	border-left-color: #333333;
+	border-left-style: solid;
+	border-left-width: 0.5pt;
+	color: #333333;
+}
+
+th.rightBorder{
+	border-right-color: #333333;
+	border-right-style: solid;
+	border-right-width: 0.5pt;
+	color: #333333;
+}
+
+td.chTable{
+	vertical-align: middle;
+	border-bottom-color: #333333;
+	border-bottom-style: solid;
+	border-bottom-width: 0.5pt;	
+	border-left-color: #333333;
+	border-left-style: solid;
+	border-left-width: 0.5pt;
+	color: #333333;
+}
+
+td.rightBorder{
+	border-right-color: #333333;
+	border-right-style: solid;
+	border-right-width: 0.5pt;
+	color: #333333;
+}

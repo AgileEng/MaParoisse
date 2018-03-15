@@ -1,0 +1,179 @@
+table{
+	font-family: Calibri, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #000000;
+	repeat-header: yes;
+}
+
+th.tableHeaderCell{
+	text-align: center;
+	font-weight: bold;
+	border-left-width: 0.5pt;
+	border-left-style: solid;
+	border-left-color: #000000;
+	border-top-width: 0.5pt;
+	border-top-style: solid;
+	border-top-color: #000000;
+}
+
+th.borderLeft{
+	border-left-width: 0.5pt;
+	border-left-style: solid;
+	border-left-color: #000000;
+}
+
+th.borderTop{
+	border-top-width: 0.5pt;
+	border-top-style: solid;
+	border-top-color: #000000;
+}
+
+th.tableHeaderCellRowSpan{
+	text-align: center;
+	font-weight: bold;
+	border-bottom-width: 0.5pt;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+	border-left-width: 0.5pt;
+	border-left-style: solid;
+	border-left-color: #000000;
+	border-top-width: 0.5pt;
+	border-top-style: solid;
+	border-top-color: #000000;
+	vertical-align: top;
+}
+
+th.tableHeaderCellSecondRowDt{
+	text-align: right;
+	font-weight: bold;
+	border-bottom-width: 0.5pt;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+	border-left-width: 0.5pt;
+	border-left-style: solid;
+	border-left-color: #000000;
+}
+
+th.tableHeaderCellSecondRowCt{
+	text-align: right;
+	font-weight: bold;
+	border-bottom-width: 0.5pt;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+	border-right-width: 0.5pt;
+	border-right-style: solid;
+	border-right-color: #000000;
+}
+
+th.tableHeaderCellSecondRowCt2{
+	text-align: right;
+	font-weight: bold;
+	border-bottom-width: 0.5pt;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+}
+
+td.groupTitleCell{
+	font-weight: bold;
+}
+
+td.simpleEntryNameCell{
+	font-size: 12px;
+	border-left-width: 0.5pt;
+	border-left-style: solid;
+	border-left-color: #000000;
+}
+
+td.borderRight{
+	border-right-width: 0.5pt;
+	border-right-style: solid;
+	border-right-color: #000000;
+}
+
+td.simpleEntryCell{
+	text-align: right;
+	font-size: 12px;
+}
+
+td.simpleEntryCellDt{
+	border-left-width: 0.5pt;
+	border-left-style: solid;
+	border-left-color: #000000;
+	text-align: right;
+	font-size: 12px;
+}
+
+td.totalEntryNameCell{
+	text-align: left;
+	font-size: 12px;
+	border-top-width: 0.5pt;
+	border-top-style: solid;
+	border-top-color: #000000;
+}
+
+td.totalEntryCellDt{
+	text-align: right;
+	font-size: 12px;
+	border-left-width: 0.5pt;
+	border-left-style: solid;
+	border-left-color: #000000;
+	border-top-width: 0.5pt;
+	border-top-style: solid;
+	border-top-color: #000000;
+}
+
+td.totalEntryCell{
+	text-align: right;
+	font-size: 12px;
+	border-top-width: 0.5pt;
+	border-top-style: solid;
+	border-top-color: #000000;
+}
+
+td.totalClassNameCell{
+	text-align: left;
+	font-size: 13px;
+	border-bottom-width: 0.5pt;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+	border-left-width: 0.5pt;
+	border-left-style: solid;
+	border-left-color: #000000;
+}
+
+td.totalClassCellDt{
+	text-align: right;
+	font-size: 13px;
+	border-bottom-width: 0.5pt;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+	border-left-width: 0.5pt;
+	border-left-style: solid;
+	border-left-color: #000000;
+}
+
+td.totalClassCell{
+	text-align: right;
+	font-size: 13px;
+	border-bottom-width: 0.5pt;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+}
+
+td.borderBottom{
+	border-bottom-width: 0.5pt;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+}
+
+td.borderLeft{
+	border-left-width: 0.5pt;
+	border-left-style: solid;
+	border-left-color: #000000;
+}
+
+td.borderTop{
+	border-top-width: 0.5pt;
+	border-top-style: solid;
+	border-top-color: #000000;
+}

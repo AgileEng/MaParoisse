@@ -1,0 +1,78 @@
+td.itTxt{
+	font-size: 11pt;
+	font-style: italic;
+	text-align: justify;
+}
+
+td.normTxt{
+	font-size: : 11pt;
+	font-style: normal;
+}
+
+td.normTxtExt{
+	font-size: : 10pt;
+	font-style: normal;
+}
+
+td.calibri{
+	font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+}
+
+td.times{
+	font-family: "Times New Roman";
+	font-size: 11pt;
+}
+
+td.timesExt{
+	font-family: "Times New Roman";
+	font-size: 10pt;
+}
+
+td.scissors{
+	vertical-align: middle;
+}
+
+span.header{
+	font-size: 14pt;
+}
+
+td.receiptCell{
+	font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+}
+
+td.borderLeft{
+	border-left-width: 0.5pt;
+	border-left-style: solid;
+	border-left-color: #000000;
+}
+
+td.borderBottom{
+	border-bottom-width: 0.5pt;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+}
+
+td.borderTop{
+	border-top-width: 0.5pt;
+	border-top-style: solid;
+	border-top-color: #000000;
+}
+
+td.borderRight{
+	border-right-width: 0.5pt;
+	border-right-style: solid;
+	border-right-color: #000000;
+}
+
+td.italic{
+	font-style: italic;
+	font-size:  10pt;
+}
+
+td.bold{
+	font-weight: bold;
+	font-size:  10pt;
+}

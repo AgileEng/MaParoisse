@@ -1,0 +1,96 @@
+td{
+	font-size: 11px;
+	border:1px;
+	border-color:#CCCCCC;
+	padding: 4px;
+	vertical-align:middle;
+}
+
+td.tenantCell{
+	font-size: 14px;
+	border:0px;
+	padding: 4px;
+	color: #3C3D3D;
+	font-weight: bold;
+}
+
+td.titleCell{
+	background-color: #CCCCCC;
+	color: #000000;
+	font-size: 13;
+	font-weight: bold;
+	text-align: center;
+}
+
+td.cellHighlighted{
+	/* background-color: #9AC8E0; */
+	background-color: #CCCCCC;
+	color: #000000;
+}
+
+td.centeredCell{
+	text-align:center; 
+}
+
+td.periodCenteredCell{
+	text-align:center;
+	width:110pt;
+}
+
+td.periodCenteredCellHighlighted{
+	text-align:center;
+	width:110pt;
+	background-color: #CCCCCC;
+}
+
+td.centeredCellHighlighted{
+	text-align:center;
+	/* background-color: #9AC8E0; */
+	background-color: #CCCCCC;
+	color: #000000;
+}
+
+td.alignedRightCellBold{
+	text-align:right;
+	font-weight:bold;
+}
+
+td.alignedLeftCellBold{
+	text-align: left;
+	font-weight: bold;
+}
+
+td.signatureCell{
+	vertical-align:top;
+	text-align:center;
+	height: 70px;
+	font-style:italic;
+}
+
+td.commentsHeaderCell{
+	text-align:center;
+	width:125pt;
+}
+
+td.commentsCell{
+	width:125pt;
+}
+
+td.commentsCellHighlighted{
+	width:125pt;
+	background-color: #CCCCCC;
+}
+
+table{
+	repeat-header:yes;
+	repeat-footer:yes;
+	border-collapse:collapse;
+}
+
+.table-break{
+	page-break-after:always;
+}
+
+header img{
+	width: 150px;
+}

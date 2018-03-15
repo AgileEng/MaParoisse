@@ -1,0 +1,80 @@
+table, tr, td {
+	margin: 0;
+	border-collapse: collapse;
+	border: 0px;
+}
+
+table{
+	repeat-header:yes;
+	repeat-footer:yes;
+	border-collapse:collapse;
+	/*page-break-after:always;*/
+}
+
+td.semaine {
+	font-size: 15pt;
+	background-color: #DEDEDE;
+	padding-left: 2pt;
+    padding-right: 2pt;
+    padding-top: 1pt;
+    padding-bottom: 0pt;
+}
+
+td.day {
+	width: 45pt;
+}
+
+div.worktype {
+	padding-bottom: 1pt;
+}
+
+td.employee {
+	width: 70pt;
+}
+
+td.total {
+	width: 40pt;
+	text-align: right;
+}
+
+td.signiture {
+	width: 80pt;
+}
+
+td {
+    border: 1px solid #CCCCCC;
+    color: #000000;
+    font-family: Calibri,sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    padding-left: 2pt;
+    padding-right: 2pt;
+    padding-top: 1px;
+    text-decoration: none;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+td.noborder {
+	border: 0px solid white !important;
+}
+
+table#legend {
+	page-break-before: always;
+}
+
+td.equalWidth {
+	width: 60pt !important;
+	border: 0px solid white !important;
+}
+
+td.stretcher {
+	width: 125pt !important;
+	border: 0px solid white !important;
+}
+
+td.companyName {
+	font-size: 15pt;
+	font-weight: bold;
+}

@@ -1,0 +1,61 @@
+td.donorsTableCell{
+	/* border-top-width: 0.5pt;
+	border-top-style: solid;
+	border-top-color: #000000; */
+	border-bottom-width: 0.5pt;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+	border-left-width: 0.5pt;
+	border-left-style: solid;
+	border-left-color: #000000;
+	height: 50px;
+}
+
+th.donorsTableHeaderCell{
+	border-top-width: 0.5pt;
+	border-top-style: solid;
+	border-top-color: #000000;
+	border-bottom-width: 0.5pt;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+	border-left-width: 0.5pt;
+	border-left-style: solid;
+	border-left-color: #000000;
+	text-align: center;
+	font-weight:bold;
+	font-size: 8.5pt;
+	height: 30px;
+}
+
+p{
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+th.borderRight{
+	border-right-width: 0.5pt;
+	border-right-style: solid;
+	border-right-color: #000000;
+}
+
+td.borderRight{
+	border-right-width: 0.5pt;
+	border-right-style: solid;
+	border-right-color: #000000;
+}
+
+td.councilTableCellOrdinary{
+	border-bottom-width: 0.5pt;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+	border-left-width: 0.5pt;
+	border-left-style: solid;
+	border-left-color: #000000;
+	height: 30px;
+}
+
+table{
+	repeat-header: yes;
+}

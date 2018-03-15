@@ -1,0 +1,34 @@
+Ext.define('MaParoisse.model.AccJournalEntryTemplate', {
+	extend: 'MaParoisse.model.util.DomainRecord',
+	fields: [{
+		name: 'accountIdentificationRuleId',
+		type: 'int'
+	}, {
+		name: 'accAccountId',
+		type: 'int'
+	}, {
+		name: 'journalIdentificationRuleId',
+		type: 'int'
+	}, {
+		name: 'journalCode',
+		type: 'string'
+	}, {
+		name: 'journalingRuleId',
+		type: 'int'
+	}, {
+		name: 'amountRuleId',
+		type: 'int'
+	}, {
+		name: 'amountParameter',
+		type: 'string'
+	}, {
+		name: 'dt',
+		type: 'boolean'
+	}, {
+		name: 'ct',
+		type: 'boolean'
+	}, {
+		name: 'codeQuete',
+		type: 'string'
+	}]
+});

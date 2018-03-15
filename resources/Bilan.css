@@ -1,0 +1,159 @@
+table{
+	font-family: Calibri, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #000000;
+	repeat-header: yes;
+}
+
+table.passifTable{
+	/* page-break-before: always; */
+	padding-left: 10px;
+	border-left-width: 3pt;
+	berder-left-style: solid;
+	border-left-color: #000000;
+}
+
+th.tableHeaderCell{
+	text-align: right;
+	font-weight: bold;
+}
+
+th.tableHeaderCellSecondRow{
+	text-align: right;
+	font-weight: bold;
+	border-bottom-width: 1pt;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+}
+
+td.groupTitleCell{
+	font-weight: bold;
+	font-family: Arial, Calibri, sans-serif;
+	font-size: 11px;
+}
+
+td.simpleEntryNameCell{
+	font-size: 11px;
+}
+
+td.simpleEntryCell{
+	text-align: right;
+	font-size: 11px;
+}
+
+td.simpleEntryCellError{
+	text-align: right;
+	font-size: 11px;
+	color: #ff0000;
+}
+
+td.subtotalSpacer{
+	background-color: #dddddd
+}
+
+td.subtotalEntryNameCell{
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	text-align: right;
+}
+
+td.subtotalEntryCell{
+	font-size: 12px;
+	font-weight: bold;
+	text-align: right;
+}
+
+td.subtotalEntryCellError{
+	font-size: 12px;
+	font-weight: bold;
+	text-align: right;
+	color: #ff0000;
+}
+
+td.subtotalEntryCellWithLine{
+	font-size: 12px;
+	font-weight: bold;
+	text-align: right;
+	border-top-width: 1pt;
+	border-top-style: solid;
+	border-top-color: #dddddd;
+}
+
+td.subtotalEntryCellWithLineError{
+	font-size: 12px;
+	font-weight: bold;
+	text-align: right;
+	border-top-width: 1pt;
+	border-top-style: solid;
+	border-top-color: #dddddd;
+	color: #ff0000;
+}
+
+
+td.subtotalEntryNameCellLevel2{
+	font-size: 13px;
+	font-weight: bold;
+	text-align: left;
+}
+
+td.subtotalEntryCellLevel2{
+	font-size: 13px;
+	font-weight: bold;
+	text-align: right;
+}
+
+td.subtotalEntryNameCellLevel3{
+	font-size: 11px;
+	font-weight: bold;
+	text-align: left;
+}
+
+td.subtotalEntryCellLevel3{
+	font-size: 11px;
+	text-align: right;
+}
+
+td.totalEntryNameCell{
+	font-size: 13px;
+	font-weight: bold;
+	text-align: center;
+	border-bottom-width: 1pt;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+}
+
+td.totalEntryCell{
+	font-size: 13px;
+	font-weight: bold;
+	text-align: right;
+	border-bottom-width: 1pt;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+}
+
+td.totalEntryCellError{
+	font-size: 13px;
+	font-weight: bold;
+	text-align: right;
+	color: #ff0000;
+	border-bottom-width: 1pt;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+}
+
+td.borderLeft{
+	border-left-width: 0.5pt;
+	border-left-style: solid;
+	border-left-color: #000000;
+}
+
+td.borderRight{
+	border-right-width: 0.5pt;
+	border-right-style: solid;
+	border-right-color: #000000;
+}
+
+td{
+	height: 15px;
+}

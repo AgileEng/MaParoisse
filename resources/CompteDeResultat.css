@@ -1,0 +1,142 @@
+table{
+	font-family: Calibri, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #000000;
+	repeat-header: yes;
+}
+
+th.tableHeaderCell{
+	text-align: center;
+	font-weight: bold;
+	border-top-width: 0.5pt;
+	border-top-style: solid;
+	border-top-color: #000000;
+	border-left-width: 0.5pt;
+	border-left-style: solid;
+	border-left-color: #000000;
+}
+
+th.tableHeaderCellSecondRow{
+	text-align: center;
+	font-weight: bold;
+	border-bottom-width: 0.5pt;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+	border-top-width: 0.5pt;
+	border-top-style: solid;
+	border-top-color: #000000;
+	border-left-width: 0.5pt;
+	border-left-style: solid;
+	border-left-color: #000000;
+}
+
+th.borderRight{
+	border-right-width: 0.5pt;
+	border-right-style: solid;
+	border-right-color: #000000;
+}
+
+td.groupTitleCell{
+	font-weight: bold;
+}
+
+td.simpleEntryNameCell{
+	font-size: 11px;
+}
+
+td.simpleEntryCell{
+	text-align: right;
+	font-size: 11px;
+}
+
+td.subtotalSpacer{
+	background-color: #dddddd
+}
+
+td.subtotalEntryNameCell{
+	background-color: #dddddd;
+	font-size: 13px;
+	/* border-top-width: 0.5pt;
+	border-top-style: solid;
+	border-top-color: #000000; */
+	font-weight: bold;
+	text-align: left;
+}
+
+td.subtotalEntryCell{
+	background-color: #dddddd;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: right;
+	/* border-bottom-width: 0.5pt;
+	border-bottom-style: solid;
+	border-bottom-color: #000000; */
+	/* border-top-width: 0.5pt;
+	border-top-style: solid;
+	border-top-color: #000000; */
+}
+
+td.subtotalEntryNameCellLevel2{
+	font-size: 13px;
+	 background-color: #dddddd; 
+	border-bottom-width: 0.5pt;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+	font-weight: bold;
+	text-align: left;
+}
+
+td.subtotalEntryCellLevel2{
+	font-size: 13px;
+	font-weight: bold;
+	 background-color: #dddddd; 
+	text-align: right;
+	border-bottom-width: 0.5pt;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+	/* border-top-width: 0.5pt;
+	border-top-style: solid;
+	border-top-color: #000000; */
+}
+
+td.subtotalEntryNameCellLevel3{
+	font-size: 11px;
+	font-weight: bold;
+	text-align: left;
+	/* border-bottom-width: 0.5pt;
+	border-bottom-style: solid;
+	border-bottom-color: #dddddd; */
+}
+
+td.subtotalEntryCellLevel3{
+	font-size: 11px;
+	text-align: right;
+	font-weight: bold;
+	/* border-bottom-width: 0.5pt;
+	border-bottom-style: solid;
+	border-bottom-color: #dddddd; */
+}
+
+td.borderLeft {
+	border-left-width: 0.5pt;
+	border-left-style: solid;
+	border-left-color: #000000;
+}
+
+td.borderRight {
+	border-right-width: 0.5pt;
+	border-right-style: solid;
+	border-right-color: #000000;
+}
+
+td.borderBottom {
+	border-bottom-width: 0.5pt;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+}
+
+td.borderTop {
+	border-top-width: 0.5pt;
+	border-top-style: solid;
+	border-top-color: #000000;
+}

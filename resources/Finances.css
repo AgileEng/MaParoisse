@@ -1,0 +1,84 @@
+body{
+	color: #000000;
+}
+
+p.startingParagraph{
+	font: 10pt 'Arial';
+	margin-top: 30px;
+}
+
+p.tableTitleParagraph{
+	font: 12pt 'Arial';
+	font-weight: bold;
+	margin-top: 40px;
+}
+
+th.tableHeaderCell{
+	font: 10pt 'Arial';
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+}
+
+th.borderLeft{
+	border-left-width: 0.5pt;
+	border-left-style: solid;
+	border-left-color: #000000;
+	border-top-width: 0.5pt;
+	border-top-style: solid;
+	border-top-color: #000000;
+}
+
+th.borderRight{
+	border-right-width: 0.5pt;
+	border-right-style: solid;
+	border-right-color: #000000;
+}
+
+td.tableEntryCell{
+	font: 9pt 'Arial';
+	vertical-align: middle;
+	height: 30px;
+}
+
+td.amount{
+	text-align: right;
+}
+
+td.center{
+	text-align: center;
+}
+
+td.borderLeft{
+	border-left-width: 0.5pt;
+	border-left-style: solid;
+	border-left-color: #000000;
+	border-top-width: 0.5pt;
+	border-top-style: solid;
+	border-top-color: #000000;
+}
+
+td.borderRight{
+	border-right-width: 0.5pt;
+	border-right-style: solid;
+	border-right-color: #000000;
+}
+
+td.tableTotalCell{
+	font: 11pt 'Arial';
+	font-weight: bold;
+	height: 30px;
+	border-bottom-width: 0.5pt;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+}
+td.borderBottom{
+	border-bottom-width: 0.5pt;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+}
+th.borderBottom{
+	border-bottom-width: 0.5pt;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+}

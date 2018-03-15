@@ -1,0 +1,250 @@
+.ae-margined-content {
+	margin-top: 230px;
+}
+
+.ae-padded-link {
+	padding-left: 15%;
+}
+
+.ae-margined-icon {
+	margin-left: 30px;
+}
+
+.ae-icon-huge {
+	font-size: 75px;
+}
+
+.ae-padded {
+	padding: 10px;
+}
+
+.ae-subtile {
+	width: 120px;
+	height: 120px;
+	position: relative;
+	display: inline-block;
+	color: white;
+}
+
+.ae-subtile span.ae-description {
+	padding-top: 20px;
+	display: inline-block;
+	font-size: 12px;
+}
+
+.ae-subtile span.name {
+	margin: 5px 0px 0px 0px !important;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.ae-animated {
+	position: relative;
+
+	/* Chrome, Safari, Opera */
+	-webkit-animation-name: slidein;
+	-webkit-animation-duration: 0.6s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-play-state: running;
+	/* Standard syntax */
+	animation-name: slidein;
+	animation-duration: 0.6s;
+	animation-timing-function: ease;
+	animation-play-state: running;
+}
+
+.ae-overflow-hidden {
+	overflow: hidden;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes slidein {
+	0%   {left: 100%; opacity: 0;}
+	60% {opacity: 0.3;}
+	100% {left: 0px; opacity: 1;}
+}
+
+/* Standard syntax */
+@keyframes slidein {
+	0%   {left: 100%; opacity: 0;}
+	60% {opacity: 0.3;}
+	100% {left: 0px; opacity: 1;}
+}
+
+/*
+	Custom Metro CSS tweaks for ExtJS Components
+*/
+.ae-ext-button-large-icon {
+	font-size: 40px !important;
+}
+
+.ae-ext-button-large{
+	border: none !important;
+	background-color: #F0F0F0 !important;
+}
+
+.ae-ext-button-large .x-btn-glyph{
+	width: 50px !important;
+	height: 50px !important;
+	padding-top: 9px !important;
+}
+
+.ae-ext-button-small-icon>*>[class*="icon-"]{
+	display: table-cell !important;
+}
+
+.ae-metro-button-small .x-btn-inner {
+	font-size: 10px !important;
+	padding: 0 0 5px 0;
+}
+
+.ae-btn-small-fix .x-btn-button-default-toolbar-small {
+	height: auto !important;
+}
+
+.ae-grid-invalid-cell {
+		background-color: #FF8585;
+}
+
+.ae-grid-invalid-cell .x-grid-cell-inner {
+	background-color: #FF8585;
+}
+
+.ae-searchfield .ae-searchfield@font-face {
+  font-family: 'iconFont';
+  src: url('../fonts/iconFont.eot');
+  src: url('../fonts/iconFont.eot?#iefix') format('embedded-opentype'), url('../fonts/iconFont.woff') format('woff'), url('../fonts/iconFont.ttf') format('truetype'), url('../fonts/iconFont.svg#iconFont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+div#ae-loader {
+	width: 650px;
+	margin: 10px auto;
+	text-align: left;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	/*font-style: oblique;*/
+	font-size: 14px;
+	line-height: 190%;
+}
+
+div#ae-loader .heading {
+	line-height: 230%;
+	border-left: 2px solid #f0a30a;
+	color: #16499a;
+	text-align: left;
+	margin-left: 150px;
+	padding-left: 15px;
+}
+
+div#ae-loader .span {
+	line-height: 300%;
+	border-left: 2px solid #f0a30a;
+	color: #16499a;
+	display: block;
+	text-align: left;
+	margin-left: 80px;
+	padding-left: 10px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+div#ae-win-loader {
+	position: relative;
+	width: 400px;
+	height: 20px;
+	overflow: hidden;
+	margin: 5px auto;
+}
+
+div#ae-win-loader div.circle {
+	width: 4px;
+	height: 4px;
+	border-radius: 5px;
+	background-color: black;
+	display: inline-block;
+	position: absolute;
+	left: -10%;
+	top: 5px;
+}
+
+div#ae-win-loader div.circle
+{
+/* Chrome, Safari, Opera */
+-webkit-animation-name: loadit;
+-webkit-animation-duration: 2s;
+-webkit-animation-timing-function: ease;
+
+-webkit-animation-iteration-count: infinite;
+-webkit-animation-play-state: running;
+/* Standard syntax */
+animation-name: loadit;
+animation-duration: 2s;
+animation-timing-function: ease;
+
+animation-iteration-count: infinite;
+animation-play-state: running;
+} 
+
+div#ae-win-loader div.circle.second {
+	-webkit-animation-delay: 0.1s;
+	animation-delay: 0.1s;
+}
+div#ae-win-loader div.circle.third {
+	-webkit-animation-delay: 0.2s;
+	animation-delay: 0.2s;
+}
+div#ae-win-loader div.circle.fourth {
+	-webkit-animation-delay: 0.3s;
+	animation-delay: 0.3s;
+}
+div#ae-win-loader div.circle.fifth {
+	-webkit-animation-delay: 0.4s;
+	animation-delay: 0.4s;
+}
+div#ae-win-loader div.circle.first {
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes loadit
+{
+	0%   {left: -5%;}
+	25%  {left: 0%;}
+	65%  {left: 99%;}
+	100%  {left: 105%;}
+}
+
+/* Standard syntax */
+@keyframes loadit
+{
+	0%   {left: -5%;}
+	25%  {left: 0%;}
+	65%  {left: 99%;}
+	100%  {left: 105%;}
+}
+
+.ae-form-trigger-user {
+    background: url("../images/icons/useradd.png") no-repeat scroll 0 center white !important;
+    width: 22px;
+}
+
+.ae-form-trigger-clear{
+	background: url("../images/icons/clear.png") no-repeat scroll 0 center white !important;
+    width: 22px;
+}
+
+.ae-grid-row-alt{
+	background-color: #f0f0f0 !important;
+}
+
+.ae-grouping-grid .x-grid-group-hd{
+	background-color: #f0f0f0 !important;
+}
+
+.ae-displayNone{
+	display: none;
+}
+
+.ae-action-column-item{
+	margin: 0 5px 0 5px;
+}

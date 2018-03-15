@@ -1,0 +1,29 @@
+Ext.define('MaParoisse.model.Donation', {
+	extend: 'MaParoisse.model.Contributor',
+	fields: [{
+		name: 'amount',
+		type: 'string'
+	}, {
+		name: 'amountChange',
+		type: 'string',
+		persist: false
+	}, {
+		name: 'year',
+		type: 'int'
+	}, {
+		name: 'accountId',
+		type: 'int'
+	}, {
+		name: 'accountCode',
+		type: 'string'
+	}, {
+		name: 'accountName',
+		type: 'string'
+	}, {
+		name: 'amountAcc',
+		type: 'string'
+	}, {
+		name: 'amountEnd',
+		type: 'string'
+	}]
+});

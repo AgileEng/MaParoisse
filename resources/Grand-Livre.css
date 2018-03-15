@@ -1,0 +1,168 @@
+table{
+	font-family: Calibri, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #000000;
+	repeat-header: yes;
+}
+
+table.innerTable{
+	page-break-inside: avoid;
+}
+
+th.tableHeaderCell{
+	text-align: right;
+	font-weight: bold;
+}
+
+b.headerP{
+	text-align: center;
+	font-weight: bold;
+	font-size: 10pt;
+}
+
+div.headerDiv{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-weight: bold;
+	font-size: 10pt;
+}
+
+th.tableHeaderCellSecondRow{
+	text-align: center;
+	font-weight: bold;
+	font-size: 10pt;
+	height: 25px;
+	
+	border-bottom-width: 0.5pt;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;	
+	
+	border-top-width: 0.5pt;
+	border-top-style: solid;
+	border-top-color: #000000;
+}
+
+th.borderRight{
+	border-right-width: 0.5pt;
+	border-right-style: solid;
+	border-right-color: #000000;
+}
+
+th.borderLeft{
+	border-left-width: 0.5pt;
+	border-left-style: solid;
+	border-left-color: #000000;
+}
+
+td.tableHeaderCellSecondRow{
+	text-align: center;
+	font-weight: bold;
+	font-size: 10pt;
+	border-top-width: 0.5pt;
+	border-top-style: solid;
+	border-top-color: #000000;
+}
+
+td.simpleEntryCell{
+	font-size:10pt;
+	text-align: left;
+	page-break-before: avoid;
+}
+
+td.simpleEntryCellAmount{
+	font-size: 10pt;
+	text-align: right;
+	page-break-before: avoid;
+	border-right-width: 0.5pt;
+	border-right-style: solid;
+	border-right-color: #000000;
+}
+
+td.simpleEntryCellCenter{
+	font-size: 10pt;
+	text-align: center;
+	page-break-before: avoid;
+}
+
+td.groupTitleCell{
+	font-size: 12pt;
+	font-weight: bold;
+	background-color: #cccccc;
+	text-align: left;
+}
+
+td.initialBalanceCell{
+	font-size: 10pt;
+	text-align: left;
+	font-weight: bold;
+	text-decoration: underline;
+	page-break-before: avoid;
+}
+
+td.initialBalanceCellAmount{
+	font-size: 10pt;
+	text-align: right;
+	page-break-before: avoid;
+}
+
+td.startDateBalanceCell{
+	font-size: 10pt;
+	text-align: left;
+	font-style: italic;
+	page-break-before: avoid;
+}
+
+td.startDateBalanceCellAmount{
+	font-size: 10pt;
+	text-align: right;
+	page-break-before: avoid;
+}
+
+td.totalBalanceCell{
+	font-size: 10pt;
+	text-align: left;
+	font-weight: bold;
+	border-bottom-width: 0.5pt;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+	page-break-before: avoid;
+	page-break-after: auto;
+}
+
+td.topBorder{
+	border-top-width: 0.5pt;
+	border-top-style: solid;
+	border-top-color: #000000;
+}
+
+td.leftBorder{
+	border-left-width: 0.5pt;
+	border-left-style: solid;
+	border-left-color: #000000;
+}
+
+td.rightBorder{
+	border-right-width: 0.5pt;
+	border-right-style: solid;
+	border-right-color: #000000;
+}
+
+td.bottomBorder{
+	border-bottom-width: 0.5pt;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+}
+
+td.totalBalanceCellAmount{
+	font-size: 10pt;
+	text-align: right;
+	font-weight: bold;
+	border-bottom-width: 0.5pt;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+	border-right-width: 0.5pt;
+	border-right-style: solid;
+	border-right-color: #000000;
+	page-break-before: avoid;
+	page-break-after: auto;
+}
