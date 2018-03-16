@@ -16,3 +16,5 @@ Ext.application({
     // of merge conflicts when upgrading to new versions of Sencha Cmd.
     //-------------------------------------------------------------------------
 });
+
+//Comment to test github integration with a dummy commit
