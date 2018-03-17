@@ -82,6 +82,7 @@
 	
 	List<String> comptesDeTiersList = new ArrayList<String>();
 	comptesDeTiersList.add("411");
+	comptesDeTiersList.add("426");
 	comptesDeTiersList.add("4675");
 	comptesDeTiersList.add("4687");
 	actifList.addAll(comptesDeTiersList);
@@ -131,6 +132,7 @@
 	passifList.add("13");
 	passifList.add("15");
 	passifList.add("16");
+	passifList.add("19");
 	passifList.addAll(comptes467List);
 	
 	List<String> comptesDeDettesList = new ArrayList<String>();
@@ -386,6 +388,17 @@
 				<td class="simpleEntryCellError borderLeft"><%=ds.getDebitBalance("411") %></td>
 			<%} else { %>
 				<td class="simpleEntryCell borderLeft"><%=ds.getDebitBalance("411") %></td>
+			<%} %>
+			<td class="simpleEntryCell borderLeft borderRight"></td>
+		</tr>
+		
+		<tr>
+			<td class="borderLeft"></td>
+			<td class="simpleEntryNameCell" colspan="3">4260 Créances sur cessions d'immobilisations</td>
+			<%if(AEMath.isNegativeAmount(AEMath.parseDouble(ds.getDebitBalance("426"), false))) {%>
+				<td class="simpleEntryCellError borderLeft"><%=ds.getDebitBalance("426") %></td>
+			<%} else { %>
+				<td class="simpleEntryCell borderLeft"><%=ds.getDebitBalance("426") %></td>
 			<%} %>
 			<td class="simpleEntryCell borderLeft borderRight"></td>
 		</tr>
@@ -720,6 +733,23 @@
 				<td class="subtotalEntryCell borderLeft borderRight"><%=ds.getCreditBalance("16") %></td>
 			<%} %>
 		</tr>
+		
+		<tr>
+			<td class="groupTitleCell borderLeft" colspan="4">FONDS DEDIES</td>
+			<td class="borderLeft"> </td>
+			<td class="borderLeft borderRight"> </td>
+		</tr>
+		<tr>
+			<td class="borderLeft"></td>
+			<td class="simpleEntryNameCell" colspan="3">1900 Fonds dedies</td>
+			<td class="simpleEntryCell borderLeft"> </td>
+			<%if(AEMath.isNegativeAmount(AEMath.parseDouble(ds.getCreditBalance("19"), false))) {%>
+				<td class="subtotalEntryCellError borderLeft borderRight"><%=ds.getCreditBalance("19") %></td>
+			<%} else { %>
+				<td class="subtotalEntryCell borderLeft borderRight"><%=ds.getCreditBalance("19") %></td>
+			<%} %>
+		</tr>
+		
 		<%if(add51XGroupToLiabilities){ %>
 				<tr>
 			<td class="groupTitleCell borderLeft" colspan="4">Découverts et concours bancaires courants</td>
