@@ -70,31 +70,56 @@ Ext.define('MaParoisse.view.saisir.JournalFilterController', {
 					
 					var accJournals = resp.accJournals;
 					
-					view.add(Ext.create('MaParoisse.view.saisir.JournalFilterTab', {
-						title: 'Consulter',
-						paymentMethodId: '',
-						bankAccountId: '',
-						monthValue: resp.accJournalFilter.month,
-						yearValue: resp.accJournalFilter.year,
-						timeControlValue: resp.accJournalFilter.timeControl,
-						dateFrom: resp.accJournalFilter.dateFrom,
-						dateTo: resp.accJournalFilter.dateTo,
-						accJournals: accJournals
-					}));
-					
-					view.setActiveTab(0);
-					
+					if (view.moduleId == "35b2" ){
+						view.add(Ext.create('MaParoisse.view.saisir.BankJournalFilterTab', {
+							title: 'Pointages',
+							paymentMethodId: '',
+							bankAccountId: '',
+							monthValue: resp.accJournalFilter.month,
+							yearValue: resp.accJournalFilter.year,
+							//timeControlValue: resp.accJournalFilter.timeControl,
+							dateFrom: resp.accJournalFilter.dateFrom,
+							dateTo: resp.accJournalFilter.dateTo,
+							accJournals: accJournals
+						}));
+						
+						view.setActiveTab(0);
+					} else {
+						view.add(Ext.create('MaParoisse.view.saisir.JournalFilterTab', {
+							title: 'Consulter',
+							paymentMethodId: '',
+							bankAccountId: '',
+							monthValue: resp.accJournalFilter.month,
+							yearValue: resp.accJournalFilter.year,
+							timeControlValue: resp.accJournalFilter.timeControl,
+							dateFrom: resp.accJournalFilter.dateFrom,
+							dateTo: resp.accJournalFilter.dateTo,
+							accJournals: accJournals
+						}));
+						
+						view.setActiveTab(0);
+					}
 				},
 				error: function () {}
 			}
 		});
 		
-		req.request({
-			method: 'loadAccJournals',
-			params: {
-				ownerId:  AccBureau.Context.principal.data.compId
-			}
-		});
+    	if (view.moduleId == "35b2" ){
+    		req.request({
+				method: 'loadAccJournals',
+				params: {
+					ownerId:  AccBureau.Context.principal.data.compId,
+					paymentMethodId: "20"
+				}
+			});
+    	} else {
+			req.request({
+				method: 'loadAccJournals',
+				params: {
+					ownerId:  AccBureau.Context.principal.data.compId
+				}
+			});
+    	}
     },
     
     releaseResources: function(){

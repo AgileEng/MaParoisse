@@ -429,6 +429,39 @@ Ext.define('MaParoisse.controller.ApplicationRouter', {
 					}
 					moduleContainer.add(Ext.create('MaParoisse.view.saisir.JournalFilter', {}));
 				}
+			} else if(moduleId == '35b2'){
+				if(!Ext.isDefined(AccBureau.Context.principal.get('compId'))){
+					Ext.create('MaParoisse.lib.MessageBox', {
+		    			//header: false,
+		    			title: 'Zachée',
+		    			formHeight: 120,
+		    			message: 'Aucun dossier sélectionné,<br/><br/>veuillez d\'abord sélectionner un dossier.',
+		    			type: MaParoisse.lib.MessageBox.OK,
+		    			callback: {
+		    				fn: function(){
+			    				Ext.create('MaParoisse.view.util.ParoisseSelectionWindow', {
+				    				mode:10, 
+				    				callback: function(customer){
+				    					Ext.getCmp('ae-viewport').getController().isSafeToCloseCurrentModule(
+			    							function(safe){
+			    								if(safe){
+			    									MaParoisse.app.getController('Root').setTenant(customer);
+			    									if(AccBureau.lastMenuState == null){
+			    										AccBureau.lastMenuState = moduleContainer.remove(Ext.getCmp('aeTilesPanel'), false);
+			    									}
+			    									moduleContainer.add(Ext.create('MaParoisse.view.saisir.JournalFilter', {moduleId:moduleId}));
+		    									}
+										});
+				    				}}).show();
+			    			}
+		    			}
+					});
+				} else {
+					if(AccBureau.lastMenuState == null){
+						AccBureau.lastMenuState = moduleContainer.remove(Ext.getCmp('aeTilesPanel'), false);
+					}
+					moduleContainer.add(Ext.create('MaParoisse.view.saisir.JournalFilter', {moduleId:moduleId}));
+				}
 			} else if(moduleId == '25b2'){
 				if(!Ext.isDefined(AccBureau.Context.principal.get('compId'))){
 					Ext.create('MaParoisse.lib.MessageBox', {

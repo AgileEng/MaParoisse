@@ -34,7 +34,8 @@ Ext.define('MaParoisse.Application', {
             'MaParoisse.view.gerer.BordereauParoisse',
             'MaParoisse.view.gerer.BudgetRealisation',
             'MaParoisse.view.parametrages.PeriodManagement',
-            'MaParoisse.view.gerer.MPChart'
+            'MaParoisse.view.gerer.MPChart',
+            "MaParoisse.view.saisir.BankJournalFilterTab"
     ],
 
     controllers: [

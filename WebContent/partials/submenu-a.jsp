@@ -109,7 +109,24 @@
 					</div>
 				</div>
 			</div>
-			<% } %>
+			<% } if(aav.checkPermission("35b2", invContext, true)){
+				%>
+				<div class="tile double bg-steel" data-ae-module="35b2">
+					<div class="ae-subtile">
+					 <div class="tile-content icon">
+						<i class="icon-tab"></i>
+					</div>
+					<div class="tile-status">
+						<span class="name">POINTAGES</span>
+					</div>
+					</div>
+					<div class="ae-subtile">
+						<div class="tile-content">
+							<span class="ae-description"></span>
+						</div>
+					</div>
+				</div>
+			<%} %>
 
 	<% } else if (compCode.equals("20a1")) { //XXX 20 #################################################################### 
 		AuthAccessValidator aav = authAccessService.getValidator(compCode, invContext);
