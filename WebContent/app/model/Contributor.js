@@ -38,6 +38,11 @@ Ext.define('MaParoisse.model.Contributor', {
 		persist: false,
 		mapping : 'employee.contact.email'
 	}, {
+		name: 'employeeSalutationID',
+		type: 'int',
+		persist: false,
+		mapping: 'employee.salutationID'
+	}, {
 		name: 'employee' //expected to be like described in MaParoisse.model.Employee
 	}, {
 		name: 'checked',

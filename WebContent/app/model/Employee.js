@@ -4,7 +4,7 @@ Ext.define('MaParoisse.model.Employee', {
     fields: [{name : 'person'}, // type : object or proxy, 'person.id is always filled' 
         	 {name : 'hasIdentityNo', type : 'boolean', defaultValue : true},
         	 {name : 'identityNo', type : 'string'},
-             {name : 'salutationID', type : 'long'}, // title: {10, Mr.} {20, Mrs.} {30, Miss}
+             {name : 'salutationID', type : 'int'}, // title: {10, Mr.} {20, Mrs.} {30, Miss}
         	 {name : 'firstName', type : 'string'},
         	 {name : 'middleName', type : 'string'},
         	 {name : 'lastName', type : 'string'},

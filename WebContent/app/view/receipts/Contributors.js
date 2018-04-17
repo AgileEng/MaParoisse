@@ -176,6 +176,43 @@ Ext.define("MaParoisse.view.receipts.Contributors",{
 					hidden: me.mode != MaParoisse.lib.Globals.getContributorsModuleModes().DOCGENERATION,
 					dataIndex: 'checked'
 				}, {
+					header: 'Salutation',
+					dataIndex: 'employeeSalutationID',
+					width:40,
+					renderer: function(value){
+						switch (value) {
+						case 0:
+							return ' ';
+							break;
+						case 10:
+							return 'Monsieur';
+							break;
+						case 20:
+							return 'Madame';
+							break;
+						}
+					},
+					editor: {
+						xtype: 'combo',
+						queryMode: 'local',
+						allowBlank: true,
+						displayField: 'name',
+						valueField: 'employeeSalutationID',
+						store: new Ext.data.Store({
+							fields: ['name', 'employeeSalutationID'],
+							data: [{
+								'name': ' ',
+								'employeeSalutationID': 0
+							}, {
+								'name': 'Monsieur',
+								'employeeSalutationID': 10
+							}, {
+								'name': 'Madame',
+								'employeeSalutationID': 20
+							}]
+						})
+					}
+				}, {
     				header: 'Nom',
     				dataIndex: 'employeeLastName',
     				editor: {

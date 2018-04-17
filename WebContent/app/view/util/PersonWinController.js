@@ -162,6 +162,7 @@ Ext.define('MaParoisse.view.util.PersonWinController', {
 				newContributor.employee = {
 		    			firstName: newContributorRecord.get('employeeFirstName'),
 		    			lastName: newContributorRecord.get('employeeLastName'),
+		    			salutationID: newContributorRecord.get('employeeSalutationID'),
 		    			address: {
 		    				address: newContributorRecord.get('employeeAddress') ,
 		    				postCode: newContributorRecord.get('employeePostCode'),

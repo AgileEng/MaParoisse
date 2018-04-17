@@ -73,6 +73,30 @@ Ext.define('MaParoisse.view.util.PersonSelectionWindow', {
 						listeners: {
 							keyup: 'onNameFieldKeyUp'
 						}
+					}, {
+						xtype: 'combo',
+						queryMode: 'local',
+						allowBlank: true,
+						displayField: 'name',
+						fieldLabel: 'Salutation',
+						width: 190,
+						margin: '0 18 0 0',
+						labelWidth: 60,
+						name: 'employeeSalutationID',
+						valueField: 'employeeSalutationID',
+						store: new Ext.data.Store({
+							fields: ['name', 'employeeSalutationID'],
+							data: [{
+								'name': ' ',
+								'employeeSalutationID': 0
+							}, {
+								'name': 'Monsieur',
+								'employeeSalutationID': 10
+							}, {
+								'name': 'Madame',
+								'employeeSalutationID': 20
+							}]
+						})
 					}]
 				}, {
 					itemId: 'col1row2',
@@ -163,8 +187,26 @@ Ext.define('MaParoisse.view.util.PersonSelectionWindow', {
 					stripeRows: false
 				},
 				columns: [{
-					dataIndex: 'employeeLastName',
+					dataIndex: 'employeeSalutationID',
 					flex: 1.5,
+					renderer: function(value, metaData, record, rowIndex, colIndex, store, view){
+						var renderedText = '';
+						switch (value) {
+						case 0:
+							renderedText = '';
+							break;
+						case 10:
+							renderedText = 'Monsieur';
+							break;
+						case 20:
+							renderedText = 'Madame';
+							break;
+						}
+						return '<p style="font-size: 10px; color: #4390DF; margin: 1px 2px 2px 2px;">Salutation</p><p style="margin: 0px 2px 1px 2px;">' + renderedText + '</p>';
+					}
+				}, {
+					dataIndex: 'employeeLastName',
+					flex: .75,
 					renderer: function(value, metaData, record, rowIndex, colIndex, store, view){
 						return '<p style="font-size: 10px; color: #4390DF; margin: 1px 2px 2px 2px;">Nom</p><p style="margin: 0px 2px 1px 2px;">' + value + '</p>';
 					}

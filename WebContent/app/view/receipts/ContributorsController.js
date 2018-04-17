@@ -140,6 +140,10 @@ Ext.define('MaParoisse.view.receipts.ContributorsController', {
     			dirty = true;
     		}
     		
+    		if(rec.get('employeeSalutationID') !== rec.get('employee').salutationID){
+    			dirty = true;
+    		}
+    		
     		if(rec.phantom && dirty){
     			contributor.dbState = 1;
     		} else if(!rec.phantom && dirty){
@@ -160,7 +164,7 @@ Ext.define('MaParoisse.view.receipts.ContributorsController', {
     			id: rec.get('employee').id,
     			person: rec.get('employee').person
     		};
-    		
+    		contributor.employee.salutationID = rec.get("employeeSalutationID");
     		contrbtrs.push(contributor);
     	});
     	

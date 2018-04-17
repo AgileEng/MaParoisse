@@ -68,13 +68,35 @@ Ext.define('MaParoisse.view.receipts.DonationController', {
     contributorRenderer: function(value, metaData, record, rowIndex, colIndex, store, view){
 		var htmlString = '';
 		
+		var employeeSalutation = '';
+		var employeeSalutationID = record.get('employeeSalutationID');
 		if(record.get('employeeLastName') != ''){
-			htmlString = '<div style="font-size: 8;white-space:normal!important"><span style="font-weight: 300;color:#4390df">Nom: </span> {0} {1} &#9;'+
-			'<span style="font-weight: 300;color:#4390df">Adresse: </span> {2} &#9;' + 
-			'<span style="font-weight: 300;color:#4390df">CP: </span> {3} <span style="font-weight: 300;color:#4390df">Commune: </span>{4}' +
-			'</div>';
+			switch (employeeSalutationID) {
+			case 0:
+				employeeSalutation = '';
+				break;
+			case 10:
+				employeeSalutation = 'Monsieur';
+				break;
+			case 20:
+				employeeSalutation = 'Madame';
+				break;
+			}
+			if (employeeSalutation == ''){
+				htmlString = '<div style="font-size: 8;white-space:normal!important"><span style="font-weight: 300;color:#4390df">Nom: </span> {0} {1} &#9;'+
+				'<span style="font-weight: 300;color:#4390df">Adresse: </span> {2} &#9;' + 
+				'<span style="font-weight: 300;color:#4390df">CP: </span> {3} <span style="font-weight: 300;color:#4390df">Commune: </span>{4}' +
+				'</div>';
+				return Ext.String.format(htmlString, record.get('employeeLastName'), record.get('employeeFirstName'), record.get('employeeAddress'), record.get('employeePostCode'), record.get('employeeTown'));
+			} else {
+				htmlString = '<div style="font-size: 8;white-space:normal!important"><span style="font-weight: 300;color:#4390df">Salutation: </span>{0} <span style="font-weight: 300;color:#4390df">Nom: </span> {1} {2} &#9;'+
+				'<span style="font-weight: 300;color:#4390df">Adresse: </span> {3} &#9;' + 
+				'<span style="font-weight: 300;color:#4390df">CP: </span> {4} <span style="font-weight: 300;color:#4390df">Commune: </span>{5}' +
+				'</div>';
+				return Ext.String.format(htmlString, employeeSalutation, record.get('employeeLastName'), record.get('employeeFirstName'), record.get('employeeAddress'), record.get('employeePostCode'), record.get('employeeTown'));
+			}
 		}
-		return Ext.String.format(htmlString, record.get('employeeLastName'), record.get('employeeFirstName'), record.get('employeeAddress'), record.get('employeePostCode'), record.get('employeeTown'));
+		
 	},
     
 	accountRenderer: function(value, metaData, record, rowIndex, colIndex, store, view){
