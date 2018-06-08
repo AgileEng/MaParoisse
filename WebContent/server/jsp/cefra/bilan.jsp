@@ -82,7 +82,7 @@
 	
 	List<String> comptesDeTiersList = new ArrayList<String>();
 	comptesDeTiersList.add("411");
-	comptesDeTiersList.add("426");
+	comptesDeTiersList.add("462");
 	comptesDeTiersList.add("4675");
 	comptesDeTiersList.add("4687");
 	actifList.addAll(comptesDeTiersList);
@@ -394,11 +394,11 @@
 		
 		<tr>
 			<td class="borderLeft"></td>
-			<td class="simpleEntryNameCell" colspan="3">4260 Créances sur cessions d'immobilisations</td>
-			<%if(AEMath.isNegativeAmount(AEMath.parseDouble(ds.getDebitBalance("426"), false))) {%>
-				<td class="simpleEntryCellError borderLeft"><%=ds.getDebitBalance("426") %></td>
+			<td class="simpleEntryNameCell" colspan="3">4620 Créances sur cessions d'immobilisations</td>
+			<%if(AEMath.isNegativeAmount(AEMath.parseDouble(ds.getDebitBalance("462"), false))) {%>
+				<td class="simpleEntryCellError borderLeft"><%=ds.getDebitBalance("462") %></td>
 			<%} else { %>
-				<td class="simpleEntryCell borderLeft"><%=ds.getDebitBalance("426") %></td>
+				<td class="simpleEntryCell borderLeft"><%=ds.getDebitBalance("462") %></td>
 			<%} %>
 			<td class="simpleEntryCell borderLeft borderRight"></td>
 		</tr>
