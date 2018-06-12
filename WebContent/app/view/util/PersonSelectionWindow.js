@@ -95,6 +95,9 @@ Ext.define('MaParoisse.view.util.PersonSelectionWindow', {
 							}, {
 								'name': 'Madame',
 								'employeeSalutationID': 20
+							}, {
+								'name': 'Mademoiselle',
+								'employeeSalutationID': 30
 							}]
 						})
 					}]
@@ -188,7 +191,7 @@ Ext.define('MaParoisse.view.util.PersonSelectionWindow', {
 				},
 				columns: [{
 					dataIndex: 'employeeSalutationID',
-					flex: 1.5,
+					flex: 1.0,
 					renderer: function(value, metaData, record, rowIndex, colIndex, store, view){
 						var renderedText = '';
 						switch (value) {
@@ -201,18 +204,21 @@ Ext.define('MaParoisse.view.util.PersonSelectionWindow', {
 						case 20:
 							renderedText = 'Madame';
 							break;
+						case 30:
+							renderedText = 'Mademoiselle';
+							break;
 						}
 						return '<p style="font-size: 10px; color: #4390DF; margin: 1px 2px 2px 2px;">Salutation</p><p style="margin: 0px 2px 1px 2px;">' + renderedText + '</p>';
 					}
 				}, {
 					dataIndex: 'employeeLastName',
-					flex: .75,
+					flex: 1.0,
 					renderer: function(value, metaData, record, rowIndex, colIndex, store, view){
 						return '<p style="font-size: 10px; color: #4390DF; margin: 1px 2px 2px 2px;">Nom</p><p style="margin: 0px 2px 1px 2px;">' + value + '</p>';
 					}
 				}, {
 					dataIndex: 'employeeFirstName',
-					flex: 1.5,
+					flex: 1.0,
 					renderer: function(value, metaData, record, rowIndex, colIndex, store, view){
 						return '<p style="font-size: 10px; color: #4390DF; margin: 1px 2px 2px 2px;">Prénom</p><p style="margin: 0px 2px 1px 2px;">' + value + '</p>';
 					}
@@ -230,7 +236,7 @@ Ext.define('MaParoisse.view.util.PersonSelectionWindow', {
 					}
 				}, {
 					dataIndex: 'employeeTown',
-					flex: 1.5,
+					flex: 1.0,
 					renderer: function(value, metaData, record, rowIndex, colIndex, store, view){
 						return '<p style="font-size: 10px; color: #4390DF; margin: 1px 2px 2px 2px;">Commune</p><p style="margin: 0px 2px 1px 2px;">' + value + '</p>';
 					}

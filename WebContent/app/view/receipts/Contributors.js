@@ -190,6 +190,9 @@ Ext.define("MaParoisse.view.receipts.Contributors",{
 						case 20:
 							return 'Madame';
 							break;
+						case 30:
+							return 'Mademoiselle';
+							break;
 						}
 					},
 					editor: {
@@ -209,6 +212,9 @@ Ext.define("MaParoisse.view.receipts.Contributors",{
 							}, {
 								'name': 'Madame',
 								'employeeSalutationID': 20
+							}, {
+								'name': 'Mademoiselle',
+								'employeeSalutationID': 30
 							}]
 						})
 					}

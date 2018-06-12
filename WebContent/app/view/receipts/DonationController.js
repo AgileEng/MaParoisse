@@ -81,6 +81,9 @@ Ext.define('MaParoisse.view.receipts.DonationController', {
 			case 20:
 				employeeSalutation = 'Madame';
 				break;
+			case 30:
+				employeeSalutation = 'Mademoiselle';
+				break;
 			}
 			if (employeeSalutation == ''){
 				htmlString = '<div style="font-size: 8;white-space:normal!important"><span style="font-weight: 300;color:#4390df">Nom: </span> {0} {1} &#9;'+
