@@ -49,7 +49,7 @@
 -->
 			<tr>
 	 			<td>&nbsp;</td>
-				<td colspan="2" style="text-align: left;" class="normTxtExt timesExt" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=ds.getContributorName() %></td>
+				<td colspan="2" style="text-align: left;" class="normTxtExt timesExt" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=ds.getContributorNameEx() %></td>
 			</tr>
 			<tr>
 	 			<td>&nbsp;</td> 
@@ -63,7 +63,7 @@
 				<td colspan="3" style="height: 30px;">&nbsp;</td>
 			</tr>
 			<tr>
-				<td colspan="3" class="itTxt calibri">Madame, Monsieur, </td>
+				<td colspan="3" class="itTxt calibri"><%=ds.inWordSalutation()%></td>
 			</tr>
 			<tr>
 				<td colspan="3" style="height: 30px;">&nbsp;</td>
