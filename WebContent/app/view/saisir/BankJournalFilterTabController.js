@@ -37,7 +37,8 @@ Ext.define('MaParoisse.view.saisir.BankJournalFilterTabController', {
 		
 		journalFilter.ownerId = AccBureau.Context.principal.data.compId;
 		journalFilter.tally = me.tallyToggleState;
-		
+		// set option to tally to identify a tally specialized filter
+		journalFilter.option = 'tally';
 		
 		var req = Ext.create('MaParoisse.lib.JsonRPC', {
 			url: '/FinancialTransactionServlet',
