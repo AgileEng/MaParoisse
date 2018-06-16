@@ -26,6 +26,10 @@ Ext.define('MaParoisse.lib.Globals', {
 		},
 		
 		queteCodes: [{
+			name: 'Sans choix',
+			code: '',
+			type: {type: '30',code: ''}
+		}, {
 			name: 'Missions d’Afrique',
 			code: '07',
 			type: {type: '30',code: ''}
