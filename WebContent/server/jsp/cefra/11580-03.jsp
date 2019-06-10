@@ -97,7 +97,7 @@
 			</tr>
 			<tr>
 				<td colspan="3" class="receiptCell borderTop borderRight borderLeft italic bold" style="height: 60px; vertical-align: top;">
-					<p  style="margin-left: 4px; margin-right: 4px;">BENFICIAIRE : <%=
+					<p  style="margin-left: 4px; margin-right: 4px;">BENEFICIAIRE : <%=
 						ds.isCustomerParoisse() ? "Fabrique de la paroisse" : "Mense"%> <%=
 						ds.getCustomerName() %>, <%=
 						ds.getCustomerAddress() %>, <%=
