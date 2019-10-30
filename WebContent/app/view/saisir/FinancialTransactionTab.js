@@ -161,8 +161,8 @@ Ext.define('MaParoisse.view.saisir.FinancialTransactionTab', {
 						store: Ext.create('Ext.data.Store', {
 							model: 'MaParoisse.model.Quete',
 							data: me.allowEditing ? queteData : [{
-								name: me.appModuleCode == '890b4' ? '2% Revenus' : me.appModuleCode == '980b4' ? 'Binages versés' : me.appModuleCode == '990b4' ? 'Messes à célébrer' : '',
-								code: me.appModuleCode == '890b4' ? '15' : me.appModuleCode == '980b4' ? '19' : me.appModuleCode == '990b4' ? '22' : '',
+								name: me.appModuleCode == '890b4' ? '20% Quêtes Mariages Enterrements' : me.appModuleCode == '980b4' ? 'Binages versés' : me.appModuleCode == '990b4' ? 'Messes à célébrer' : '', // changed form "2% Revenus" to "20 % quêtes mariages enterrements"
+								code: me.appModuleCode == '890b4' ? '16' : me.appModuleCode == '980b4' ? '19' : me.appModuleCode == '990b4' ? '22' : '',
 								type: '20'
 							}]
 						})

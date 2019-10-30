@@ -8,7 +8,11 @@ Ext.define('MaParoisse.view.receipts.ContributorsController', {
     
     onRender: function(){
     	var me = this;
-    	me.loadInitialData();
+    	me.loadInitialData();/*
+    	var view = me.getView();
+    	var grid = view.getComponent('contributorsGrid');
+    	grid.getStore().setDefaultSort("employeeLastName", SortDir.ASC);
+*/
     },
     
     onSaveContributorsClicked: function(){

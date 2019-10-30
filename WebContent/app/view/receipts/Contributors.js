@@ -166,7 +166,14 @@ Ext.define("MaParoisse.view.receipts.Contributors",{
     			}] : [],
     			store: new Ext.data.Store({
     				model: 'MaParoisse.model.Contributor',
-    				autoDestroy: true
+    				autoDestroy: true,
+    				sorters: [{
+    	                property: 'employeeLastName',
+    	                direction: 'asc'
+    	            },{
+    	                property: 'employeeFirstName',
+    	                direction: 'asc'
+    	            }]
     			}),
     			columns: [{
     				xtype: 'rownumberer',

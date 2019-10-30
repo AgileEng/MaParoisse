@@ -46,7 +46,7 @@
 			
 			if (aav.checkPermission("350b4", invContext, true)) {
 			%>
-			<div class="tile double bg-cyan" data-ae-module="350b4">
+			<!-- Removed Update 11.2019<div class="tile double bg-cyan" data-ae-module="350b4">
 				<div class="ae-subtile">
 				 <div class="tile-content icon">
 					<i class="icon-enter"></i>
@@ -60,12 +60,12 @@
 						<span class="ae-description"></span>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<% } 
 			
 			if (aav.checkPermission("360b4", invContext, true)) {
 			%>
-			<div class="tile double bg-cyan" data-ae-module="360b4">
+			<!-- Removed Update 11.2019 <div class="tile double bg-cyan" data-ae-module="360b4">
 				<div class="ae-subtile">
 				 <div class="tile-content icon">
 					<i class="icon-enter"></i>
@@ -79,7 +79,7 @@
 						<span class="ae-description">Selon plan du diocèse: quêtes chauffage, bancs…</span>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<% } 
 			
 			if (aav.checkPermission("370b4", invContext, true)) {
@@ -531,7 +531,7 @@
 			
 			if (aav.checkPermission("580b4", invContext, true)) {
 			%>
-			<div class="tile double bg-lightOlive" data-ae-module="580b4">
+			<!-- Removed Update 11.2019<div class="tile double bg-lightOlive" data-ae-module="580b4">
 				<div class="ae-subtile">
 				 <div class="tile-content icon">
 					<i class="icon-coins"></i>
@@ -545,7 +545,7 @@
 						<span class="ae-description">Paiement à l'Archevêché</span>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<% } 
 			
 			if (aav.checkPermission("590b4", invContext, true)) {
@@ -597,11 +597,11 @@
 					<span class="name">Droits reversés à la Fabrique</span>
 				</div>
 				</div>
-				<div class="ae-subtile">
+				<!-- Removed Update 11.2019<div class="ae-subtile">
 					<div class="tile-content">
 						<span class="ae-description">Pour les Menses</span>
 					</div>
-				</div>
+				</div> -->
 			</div>
 			<% } %>
 	<% } else if (compCode.equals("40a3")) { //XXX 40 ############################################################# 
@@ -612,7 +612,7 @@
 			<%
 			if (aav.checkPermission("620b4", invContext, true)) {
 			%>
-			<div class="tile double bg-orange" data-ae-module="620b4">
+			<!-- Removed Update 11.2019<div class="tile double bg-orange" data-ae-module="620b4">
 				<div class="ae-subtile">
 				 <div class="tile-content icon">
 					<i class="icon-radio-checked"></i>
@@ -626,7 +626,7 @@
 						<span class="ae-description">Paroisse - Fabrique; Mariages; enterrements… </span>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<% } 
 			
 			if (aav.checkPermission("630b4", invContext, true)) {
@@ -640,17 +640,17 @@
 					<span class="name">Intentions de Messe</span>
 				</div>
 				</div>
-				<div class="ae-subtile">
+				<!-- Removed Update 11.2019<div class="ae-subtile">
 					<div class="tile-content">
 						<span class="ae-description">Menses- Communautés</span>
 					</div>
-				</div>
+				</div> -->
 			</div>
 			<% } 
 			
 			if (aav.checkPermission("640b4", invContext, true)) {
 			%>
-			<div class="tile double bg-orange" data-ae-module="640b4">
+			<!-- Removed Update 11.2019<div class="tile double bg-orange" data-ae-module="640b4">
 				<div class="ae-subtile">
 				 <div class="tile-content icon">
 					<i class="icon-radio-checked"></i>
@@ -664,7 +664,7 @@
 						<span class="ae-description"></span>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<% } 
 			
 			if (aav.checkPermission("650b4", invContext, true)) {
@@ -728,7 +728,7 @@
 		
 		if (aav.checkPermission("680b4", invContext, true)) {
 		%>
-		<div class="tile double bg-cyan" data-ae-module="680b4">
+		<!-- Removed Update 11.2019<div class="tile double bg-cyan" data-ae-module="680b4">
 			<div class="ae-subtile">
 			 <div class="tile-content icon">
 				<i class="icon-enter"></i>
@@ -742,12 +742,12 @@
 					<span class="ae-description"></span>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<% } 
 		
 		if (aav.checkPermission("690b4", invContext, true)) {
 		%>
-		<div class="tile double bg-cyan" data-ae-module="690b4">
+		<!-- Removed Update 11.2019 <div class="tile double bg-cyan" data-ae-module="690b4">
 			<div class="ae-subtile">
 			 <div class="tile-content icon">
 				<i class="icon-enter"></i>
@@ -761,7 +761,7 @@
 					<span class="ae-description">Selon plan du diocèse: quêtes chauffage, bancs…</span>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<% } 
 		
 		if (aav.checkPermission("700b4", invContext, true)) {
@@ -1213,7 +1213,7 @@
 		
 		if (aav.checkPermission("910b4", invContext, true)) {
 		%>
-		<div class="tile double bg-lightOlive" data-ae-module="910b4">
+		<!-- Removed Update 11.2019<div class="tile double bg-lightOlive" data-ae-module="910b4">
 			<div class="ae-subtile">
 			 <div class="tile-content icon">
 				<i class="icon-coins"></i>
@@ -1227,7 +1227,7 @@
 					<span class="ae-description">Paiement à l'Archevêché</span>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<% } 
 		
 		if (aav.checkPermission("920b4", invContext, true)) {
@@ -1279,11 +1279,11 @@
 				<span class="name">Droits reversés à la Fabrique</span>
 			</div>
 			</div>
-			<div class="ae-subtile">
+			<!-- Removed Update 11.2019 <div class="ae-subtile">
 				<div class="tile-content">
 					<span class="ae-description">Pour les Menses</span>
 				</div>
-			</div>
+			</div> -->
 		</div>
 		<% } %>
 	<% } else if (compCode.equals("80a3")) { //XXX 80a3 ############################################################# 
@@ -1294,7 +1294,7 @@
 		<%
 		if (aav.checkPermission("950b4", invContext, true)) {
 		%>
-		<div class="tile double bg-orange" data-ae-module="950b4">
+		<!-- Removed Update 11.2019<div class="tile double bg-orange" data-ae-module="950b4">
 			<div class="ae-subtile">
 			 <div class="tile-content icon">
 				<i class="icon-radio-checked"></i>
@@ -1308,7 +1308,7 @@
 					<span class="ae-description">Paroisse - Fabrique; Mariages; enterrements… </span>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<% } 
 		
 		if (aav.checkPermission("960b4", invContext, true)) {
@@ -1322,17 +1322,17 @@
 				<span class="name">Intentions de Messe</span>
 			</div>
 			</div>
-			<div class="ae-subtile">
+			<!--Removed Update 11.2019 <div class="ae-subtile">
 				<div class="tile-content">
 					<span class="ae-description">Menses- Communautés</span>
 				</div>
-			</div>
+			</div> -->
 		</div>
 		<% } 
 		
 		if (aav.checkPermission("970b4", invContext, true)) {
 		%>
-		<div class="tile double bg-orange" data-ae-module="970b4">
+		<!-- Removed Update 11.2019 <div class="tile double bg-orange" data-ae-module="970b4">
 			<div class="ae-subtile">
 			 <div class="tile-content icon">
 				<i class="icon-radio-checked"></i>
@@ -1346,7 +1346,7 @@
 					<span class="ae-description"></span>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<% } 
 		
 		if (aav.checkPermission("980b4", invContext, true)) {
@@ -1914,7 +1914,7 @@
 			<% }
 			if (aav.checkPermission("205b3", invContext, true)) {
 				%>
-			<div class="tile double bg-amber" data-ae-module="205b3">
+			<!-- Removed Update 11.2019 <div class="tile double bg-amber" data-ae-module="205b3">
 				<div class="ae-subtile">
 				 <div class="tile-content icon">
 					<i class="icon-stats"></i>
@@ -1928,7 +1928,7 @@
 						<span class="ae-description">Quêtes particulières</span>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<% }
 			if (aav.checkPermission("207b3", invContext, true)) {
 				%>
@@ -2159,7 +2159,7 @@
 				</div>
 				<div class="ae-subtile">
 					<div class="tile-content">
-						<span class="ae-description">Le Conseil</span>
+						<span class="ae-description">Membres</span>
 					</div>
 				</div>
 			</div>

@@ -81,7 +81,7 @@ Ext.define('MaParoisse.view.parametrages.Conseil', {
 					itemId: 'bureauGrid',
 					reserveScrollbar: true,
 					forceFit: true,
-					flex: 2,
+					flex: 5,
 					store: new Ext.data.Store({
 						model: 'MaParoisse.model.CouncilMember',
 						groupField: 'councilId',
@@ -122,17 +122,24 @@ Ext.define('MaParoisse.view.parametrages.Conseil', {
 						modelValidation: true,
 						renderer: function(value, metaData, record, rowIndex, colIndex, store, view){
 							switch(record.get('positionId')){
-								case 20:
+								/*case 20:
 									return 'Président';
-									break;
+									break;*/
 								case 30:
 									return 'Trésorier';
 									break;
-								case 40:
+								/*case 40:
 									return 'Secrétaire';
-									break;
+									break;*/
 								default:
-									return '';
+									switch(record.get('typeId')){
+										case 20:
+											return 'Curé';
+											break;
+										default:
+											return 'Autre';
+											break;
+									}
 									break;
 							}
 						}
@@ -211,7 +218,8 @@ Ext.define('MaParoisse.view.parametrages.Conseil', {
 							vtype: 'email'
 						}
 //						renderer: 'recordValidationRenderer'
-					}, {
+					}, { 
+						hidden: true,//Update 11.2019
 						text: 'Date entrée au Conseil',
 						resizable: false,
 						xtype: 'datecolumn',
@@ -223,6 +231,7 @@ Ext.define('MaParoisse.view.parametrages.Conseil', {
 							format: 'd/m/Y'
 						}
 					}, {
+						hidden: true,//Update 11.2019
 						text: 'Date 1ère Election',
 						resizable: false,
 						xtype: 'datecolumn',
@@ -234,6 +243,7 @@ Ext.define('MaParoisse.view.parametrages.Conseil', {
 							format: 'd/m/Y'
 						}
 					}, {
+						hidden: true,//Update 11.2019
 						text: 'Date prochain renouvellement',
 						resizable: false,
 						xtype: 'datecolumn',
@@ -440,7 +450,8 @@ Ext.define('MaParoisse.view.parametrages.Conseil', {
 						}
 //						renderer: 'recordValidationRenderer'
 					}, {
-						text: 'Date entrée au Conseil',
+						//hidden: true,//Update 11.2019
+						text: 'Date entrée au Conseil', 
 						resizable: false,
 						xtype: 'datecolumn',
 						format: 'd/m/Y',
@@ -451,6 +462,7 @@ Ext.define('MaParoisse.view.parametrages.Conseil', {
 							format: 'd/m/Y'
 						}
 					}, {
+						//hidden: true,//Update 11.2019
 						text: 'Date 1ère Election',
 						resizable: false,
 						xtype: 'datecolumn',
@@ -462,6 +474,7 @@ Ext.define('MaParoisse.view.parametrages.Conseil', {
 							format: 'd/m/Y'
 						}
 					}, {
+						hidden: true,//Update 11.2019
 						text: 'Date prochain renouvellement',
 						resizable: false,
 						xtype: 'datecolumn',
@@ -538,7 +551,8 @@ Ext.define('MaParoisse.view.parametrages.Conseil', {
 		    		    }
 		    		}
 				}, {
-			        xtype: 'fieldcontainer',
+					hidden: true,//Update 11.2019
+			        xtype: 'fieldcontainer', 
 			        flex: .5,
 			        itemId: 'fieldContainer',
 			        msgTarget : 'side',

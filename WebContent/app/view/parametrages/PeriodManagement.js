@@ -57,7 +57,7 @@ Ext.define("MaParoisse.view.parametrages.PeriodManagement",{
 						baseCls: 'ae-ext-button-small-icon',
 				        scale: 'small',
 				        iconAlign: 'top',
-				        text: 'Etats Archevêché',
+				        text: 'Etats annuels', //changed from "Etats Archevêché" to "Etats annuels" Update 11.2019
 				        handler: 'onPrintClicked'
 				    }, {
 						icon: null,

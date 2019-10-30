@@ -155,7 +155,7 @@ Ext.define('MaParoisse.view.Customer', {
 							fontWeight: '700',
 							textTransform: 'uppercase'
 						},
-						fieldLabel: 'Code de la paroisse',
+						fieldLabel: 'Code', //label changed from "Code de la paroisse" to "Code" Update 11.2019
 						name: 'code',
 						msgTarget: 'qtip',
 						disabled: isClientCabinet,
@@ -167,12 +167,17 @@ Ext.define('MaParoisse.view.Customer', {
 							fontWeight: '700',
 							textTransform: 'uppercase'
 						},
-						fieldLabel: 'Nom de la Paroisse (nom du saint, de la sainte)',
+						fieldLabel: 'Nom', //label changed from "Nom de la Paroisse (nom du saint, de la sainte)" to "Nom" Update 11.2019
 						name: 'name',
 						msgTarget: 'qtip',
 						disabled: isClientCabinet,
-						allowBlank: false
-					}, {
+						allowBlank: false,
+						style: {						//Style moved from description field Update 11.2019
+							paddingBottom: '20px',
+							marginBottom: '10px',
+							borderBottom: '1px solid #cccccc'
+						}
+					}, /*{
 						xtype: 'textfield',
 						maxLength: 32,
 						fieldLabel: 'Nature entité',
@@ -184,7 +189,7 @@ Ext.define('MaParoisse.view.Customer', {
 							marginBottom: '10px',
 							borderBottom: '1px solid #cccccc'
 						}
-					}, {
+					}*/, {
 						xtype: 'label',
 						text: 'Adresse - Commune'
 					}, {
@@ -221,13 +226,13 @@ Ext.define('MaParoisse.view.Customer', {
 						allowBlank: false,
 						msgTarget: 'qtip',
 						name: 'town',
-						style: {
+						/*style: { //removed Update 11.2019
 							paddingBottom: '20px',
 							marginBottom: '20px',
 							borderBottom: '1px solid #cccccc'
-						}
-					}, {
-						xtype: 'textfield',
+						}*/
+					},/* {
+						xtype: 'textfield',		//removed Update 11.2019
 						maxLength: 20,
 						fieldLabel: 'Statut',
 						name: 'paroisseStatut',
@@ -245,7 +250,7 @@ Ext.define('MaParoisse.view.Customer', {
 						xtype: 'textfield',
 						fieldLabel: 'Nom Communauté de Paroisses',
 						name: 'paroisseContactPerson'
-					}]
+					}*/]
 				}],
 				listeners: {
 					scope: this,

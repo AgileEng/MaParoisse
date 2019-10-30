@@ -10,6 +10,7 @@
 		String amountSpelled = amountInWords[0] + " euro(s)" + (hasFraction ? (" et " + amountInWords[1] + " centime(s)") : "");
 	%>
 <!DOCTYPE body PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--Eddited Update 11.2019  -->
 <html>
 <head>
 </head>
@@ -70,7 +71,7 @@
 			</tr>
 			<tr>
 				<td colspan="3" class="itTxt calibri">
-					Monsieur le Curé et le Conseil de Fabrique vous remercient très chaleureusement pour votre soutien à votre Paroisse et vous prient de trouver ci-dessous le reçu qui vous permettra de bénéficier d’une réduction d’impôt égale à 66 % du montant de votre don ; ce reçu doit être conservé pour pouvoir être présenté en cas de demande de l’Administration fiscale.
+					Monsieur le Curé vous remercient très chaleureusement pour votre soutien à La Communauté de Paroisse et vous prient de trouver ci-dessous le reçu qui vous permettra de bénéficier d’une réduction d’impôt égale à 66 % du montant de votre don ; ce reçu doit être conservé pour pouvoir être présenté en cas de demande de l’Administration fiscale.
 				</td>
 			</tr>
 			<tr>
@@ -98,7 +99,7 @@
 			<tr>
 				<td colspan="3" class="receiptCell borderTop borderRight borderLeft italic bold" style="height: 60px; vertical-align: top;">
 					<p  style="margin-left: 4px; margin-right: 4px;">BENEFICIAIRE : <%=
-						ds.isCustomerParoisse() ? "Fabrique de la paroisse" : "Mense"%> <%=
+						ds.isCustomerParoisse() ? "La Communauté de Paroisse de la paroisse" : "Mense"%> <%=
 						ds.getCustomerName() %>, <%=
 						ds.getCustomerAddress() %>, <%=
 						ds.getCustomerPostCode() %>, <%=
@@ -118,7 +119,7 @@
 			</tr>
 			<tr>
 				<td class="receiptCell borderTop borderLeft" style="height: 70px; vertical-align: top; text-align: justify; font-size: 11pt;">
-					<p style="margin-left: 4px; margin-right: 4px;">La Fabrique d'Eglise (la Mense curiale) reconnaît avoir reçu à titre de don ouvrant droit à réduction d’impôt la somme de :</p>
+					<p style="margin-left: 4px; margin-right: 4px;">La Communauté de Paroisse d'Eglise (la Mense curiale) reconnaît avoir reçu à titre de don ouvrant droit à réduction d’impôt la somme de :</p>
 				</td>
 				<td colspan="2" class="receiptCell borderTop borderRight borderLeft italic bold" style="height: 70px; vertical-align: top; text-align:center; font-size: 12pt;">
 					<p><%=ds.amountAsString()%> &euro;<br /><%=amountSpelled%></p>
@@ -146,7 +147,7 @@
 			</tr>
 			<tr>
 				<td colspan="3" style="font-size: 10pt; text-align: justify; font-family: 'Times New Roman'; font-style: italic;">
-					Ce reçu est établi à partir d’un fichier informatique à l’usage exclusif de la Paroisse ou de la Mense curiale. En application des articles 39 et suivants de la loi du 6 janvier 1978 modifiée, vous bénéficiez d’un droit d’accès et de rectification aux informations qui vous concernent. Pour exercer ce droit vous devrez vous adresser au Président du Conseil de Fabrique de la Paroisse ou à Monsieur le Curé pour les reçus émis par la Mense curiale.
+					Ce reçu est établi à partir d’un fichier informatique à l’usage exclusif de la La Communauté de Paroisse. En application des articles 39 et suivants de la loi du 6 janvier 1978 modifiée, vous bénéficiez d’un droit d’accès et de rectification aux informations qui vous concernent. Pour exercer ce droit vous devrez vous adresser au Président du Conseil de Fabrique de pour les reçus émis par.
 				</td>
 			</tr>
 			</tbody>

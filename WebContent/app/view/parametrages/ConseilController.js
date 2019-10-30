@@ -347,26 +347,31 @@ Ext.define('MaParoisse.view.parametrages.ConseilController', {
 		}
 	},
 	
+	/*Removed stuf Update 11.2019*/
 	setCurrentCouncil: function(council){
-		var membersGrid = this.getView().getComponent('membersGrid');
+		//var membersGrid = this.getView().getComponent('membersGrid');
 		var bureauGrid = this.getView().getComponent('bureauGrid');
 		var endDateField = this.getView().getComponent('fieldContainer').getComponent('endDateField');
 		
 		this.currentCouncil = Ext.create('MaParoisse.model.Council',council);
 		
 		var members = this.currentCouncil.get('members'),
-			bureauMembers = [],
-			ordinaryMembers = [];
-		
+			bureauMembers = [];
+			//ordinaryMembers = [];
+		var ordinaryCount = 0;
 		for(var i = 0; i < members.length; i++){
 			if(members[i].positionId != 10){
 				bureauMembers.push(members[i]);
 			}else {
-				ordinaryMembers.push(members[i]);
+				if(ordinaryCount <= 2){
+					bureauMembers.push(members[i]);
+					ordinaryCount++;
+				}
+				
 			}
 		}
 		
-		membersGrid.getStore().loadRawData(ordinaryMembers);
+		//membersGrid.getStore().loadRawData(ordinaryMembers);
 		bureauGrid.getStore().loadRawData(bureauMembers);
 		
 		endDateField.setValue(this.currentCouncil.get('endDate'));
