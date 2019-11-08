@@ -86,7 +86,7 @@ Ext.define("MaParoisse.view.receipts.DocGenWindow",{
     			itemId: 'fromAccountField',
     			allowBlank: false,
     			name: 'fromAcc',
-    			maxLength: 4,
+    			maxLength:6,//Changed Update 11.2019
     			minLength: 4,
     			maskRe: /[0-9]/,
     			fieldLabel: 'Compte start'
@@ -99,7 +99,7 @@ Ext.define("MaParoisse.view.receipts.DocGenWindow",{
     			itemId: 'toAccountField',
     			allowBlank: false,
     			name: 'toAcc',
-    			maxLength: 4,
+    			maxLength:6,//Changed Update 11.2019
     			minLength: 4,
     			maskRe: /[0-9]/,
     			fieldLabel: 'Compte end'
@@ -119,13 +119,13 @@ Ext.define("MaParoisse.view.receipts.DocGenWindow",{
     				xtype: 'textfield',
     				allowBlank: true,
     				fieldLabel: 'Compte',
-    				maxLength: 4,
+        			maxLength:6,//Changed Update 11.2019
     				maskRe: /[0-9]/,
     				itemId: 'fromAccCode'
     			}, {
     				xtype: 'textfield',
     				allowBlank: true,
-    				maxLength: 4,
+        			maxLength:6,//Changed Update 11.2019
     				maskRe: /[0-9]/,
     				itemId: 'toAccCode'
     			}]

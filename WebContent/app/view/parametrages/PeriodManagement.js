@@ -96,7 +96,9 @@ Ext.define("MaParoisse.view.parametrages.PeriodManagement",{
 				tbar:[' '],
 			}]
     	};
-    	
+    	if(AccBureau.Context.principal['data']['appType'] == 'fabrique'){
+    		config['items'][0]['dockedItems'][0]['items'][2]['text'] = 'Etats Archevêché';
+    	}
     	Ext.apply(me, config);
     	me.callParent(arguments);
     },

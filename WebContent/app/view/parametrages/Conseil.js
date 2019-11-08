@@ -121,7 +121,7 @@ Ext.define('MaParoisse.view.parametrages.Conseil', {
 						dataIndex: 'positionId',
 						modelValidation: true,
 						renderer: function(value, metaData, record, rowIndex, colIndex, store, view){
-							switch(record.get('positionId')){
+							switch(record.get('positionId')){//
 								/*case 20:
 									return 'Président';
 									break;*/
@@ -143,7 +143,7 @@ Ext.define('MaParoisse.view.parametrages.Conseil', {
 									break;
 							}
 						}
-					}, {
+					},{
 						text: 'Nom',
 						resizable: false,
 						flex: 1,
@@ -462,7 +462,7 @@ Ext.define('MaParoisse.view.parametrages.Conseil', {
 							format: 'd/m/Y'
 						}
 					}, {
-						//hidden: true,//Update 11.2019
+						hidden: true,//Update 11.2019
 						text: 'Date 1ère Election',
 						resizable: false,
 						xtype: 'datecolumn',
@@ -581,7 +581,31 @@ Ext.define('MaParoisse.view.parametrages.Conseil', {
 					}]
 			    }]
 		};
-		
+		if(AccBureau.Context.principal['data']['appType'] == 'fabrique'){
+			config['items'][0]['columns'][0]['renderer'] = function(value, metaData, record, rowIndex, colIndex, store, view){
+				switch(record.get('positionId')){
+					case 20:
+						return 'Président';
+						break;
+					case 30:
+						return 'Trésorier';
+						break;
+					case 40:
+						return 'Secrétaire';
+						break;
+					default:
+						return '';
+						break;
+				}
+			};
+			config['items'][0]['columns'][8]['hidden'] = false;
+			config['items'][0]['columns'][9]['hidden'] = false;
+			config['items'][0]['columns'][10]['hidden'] = false;
+			config['items'][1]['columns'][0]['hidden'] = false;
+			config['items'][1]['columns'][10]['hidden'] = false;
+			config['items'][1]['columns'][11]['hidden'] = false;
+			config['items'][2]['hidden'] = false;
+		}
 		Ext.apply(this, config);
 		this.callParent(arguments);
 	},

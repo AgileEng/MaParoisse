@@ -10,5 +10,6 @@ Ext.define('MaParoisse.model.AuthPrincipal', {
 	    	 {name : 'person'}, 
 	    	 {name : 'roles'},
 	    	 {name : 'companies'},
-	    	 {name: 'locked', type: 'boolean'}]
+	    	 {name: 'locked', type: 'boolean'},
+	    	 {name: 'appType', type: 'string'}]
 });

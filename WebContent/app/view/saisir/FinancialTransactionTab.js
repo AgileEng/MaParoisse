@@ -157,17 +157,28 @@ Ext.define('MaParoisse.view.saisir.FinancialTransactionTab', {
 							flex: 1,
 							resizable: false,
 							sortable: false
-						}],
-						store: Ext.create('Ext.data.Store', {
-							model: 'MaParoisse.model.Quete',
-							data: me.allowEditing ? queteData : [{
-								name: me.appModuleCode == '890b4' ? '20% Quêtes Mariages Enterrements' : me.appModuleCode == '980b4' ? 'Binages versés' : me.appModuleCode == '990b4' ? 'Messes à célébrer' : '', // changed form "2% Revenus" to "20 % quêtes mariages enterrements"
-								code: me.appModuleCode == '890b4' ? '16' : me.appModuleCode == '980b4' ? '19' : me.appModuleCode == '990b4' ? '22' : '',
-								type: '20'
-							}]
-						})
+						}]
 					}]
 				};
+			if(AccBureau.Context.principal['data']['appType'] == 'fabrique'){
+				questGridColumn['items'][0]['store'] = Ext.create('Ext.data.Store', {
+					model: 'MaParoisse.model.Quete',
+					data: me.allowEditing ? queteData : [{
+						name: me.appModuleCode == '890b4' ? '2% Revenus' : me.appModuleCode == '980b4' ? 'Binages versés' : me.appModuleCode == '990b4' ? 'Messes à célébrer' : '', // changed form "2% Revenus" to "20 % quêtes mariages enterrements"
+						code: me.appModuleCode == '890b4' ? '15' : me.appModuleCode == '980b4' ? '19' : me.appModuleCode == '990b4' ? '22' : '',
+						type: '20'
+					}]
+				});
+			}else if(AccBureau.Context.principal['data']['appType'] == 'mense'){
+				questGridColumn['items'][0]['store'] = Ext.create('Ext.data.Store', {
+					model: 'MaParoisse.model.Quete',
+					data: me.allowEditing ? queteData : [{
+						name: me.appModuleCode == '890b4' ? '20% Quêtes Mariages Enterrements' : me.appModuleCode == '980b4' ? 'Binages versés' : me.appModuleCode == '990b4' ? 'Messes à célébrer' : '', // changed form "2% Revenus" to "20 % quêtes mariages enterrements"
+						code: me.appModuleCode == '890b4' ? '16' : me.appModuleCode == '980b4' ? '19' : me.appModuleCode == '990b4' ? '22' : '',
+						type: '20'
+					}]
+				});
+			}
 		} else if(me.questType == MaParoisse.lib.Globals.getSaisieGuidee().queteTypes.type3){
 			questGridColumn = {
 					columnWidth: 0.5,

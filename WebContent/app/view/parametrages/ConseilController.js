@@ -347,36 +347,67 @@ Ext.define('MaParoisse.view.parametrages.ConseilController', {
 		}
 	},
 	
-	/*Removed stuf Update 11.2019*/
+	/*Condition added for Update 11.2019*/
 	setCurrentCouncil: function(council){
-		//var membersGrid = this.getView().getComponent('membersGrid');
-		var bureauGrid = this.getView().getComponent('bureauGrid');
-		var endDateField = this.getView().getComponent('fieldContainer').getComponent('endDateField');
-		
-		this.currentCouncil = Ext.create('MaParoisse.model.Council',council);
-		
-		var members = this.currentCouncil.get('members'),
-			bureauMembers = [];
-			//ordinaryMembers = [];
-		var ordinaryCount = 0;
-		for(var i = 0; i < members.length; i++){
-			if(members[i].positionId != 10){
-				bureauMembers.push(members[i]);
-			}else {
-				if(ordinaryCount <= 2){
+		if (AccBureau.Context.principal['data']['appType'] == 'fabrique'){
+			var membersGrid = this.getView().getComponent('membersGrid');
+			var bureauGrid = this.getView().getComponent('bureauGrid');
+			var endDateField = this.getView().getComponent('fieldContainer').getComponent('endDateField');
+
+			this.currentCouncil = Ext.create('MaParoisse.model.Council',council);
+			
+			var members = this.currentCouncil.get('members'),
+			bureauMembers = [],
+			ordinaryMembers = [];
+
+			for(var i = 0; i < members.length; i++){
+				if(members[i].positionId != 10){
 					bureauMembers.push(members[i]);
-					ordinaryCount++;
+				}else {
+					ordinaryMembers.push(members[i]);
 				}
-				
+
 			}
+			membersGrid.getStore().loadRawData(ordinaryMembers);
+			bureauGrid.getStore().loadRawData(bureauMembers);
+
+			endDateField.setValue(this.currentCouncil.get('endDate'));
+
+		}else {
+			//var membersGrid = this.getView().getComponent('membersGrid');
+			var bureauGrid = this.getView().getComponent('bureauGrid');
+			var endDateField = this.getView().getComponent('fieldContainer').getComponent('endDateField');
+			
+			this.currentCouncil = Ext.create('MaParoisse.model.Council',council);
+			
+			var members = this.currentCouncil.get('members'),
+				bureauMembers = [];
+				//ordinaryMembers = [];
+			var ordinaryCount = 0;
+			for(var i = 0; i < members.length; i++){
+				if(members[i].positionId != 10){
+					bureauMembers.push(members[i]);
+				}else {
+					if(ordinaryCount <= 2){
+						bureauMembers.push(members[i]);
+						ordinaryCount++;
+					}
+					
+				}
+			}
+			
+			//membersGrid.getStore().loadRawData(ordinaryMembers);
+			bureauGrid.getStore().loadRawData(bureauMembers);
+			
+			endDateField.setValue(this.currentCouncil.get('endDate'));
 		}
-		
-		//membersGrid.getStore().loadRawData(ordinaryMembers);
-		bureauGrid.getStore().loadRawData(bureauMembers);
-		
-		endDateField.setValue(this.currentCouncil.get('endDate'));
 	},
 	
+	/*
+	 * setCurrentCouncil: function(council){
+
+	},
+	*/
 	isValidCouncil: function(){
 		var valid = true,
 			view = this.getView(),
@@ -550,7 +581,6 @@ Ext.define('MaParoisse.view.parametrages.ConseilController', {
 	},
 	
 	positionRenderer: function(value, metaData, record, rowIndex, colIndex, store, view){
-
 		switch (value){
 			case 20:
 				return 'Le curé *';

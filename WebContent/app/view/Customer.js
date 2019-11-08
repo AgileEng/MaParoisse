@@ -172,24 +172,7 @@ Ext.define('MaParoisse.view.Customer', {
 						msgTarget: 'qtip',
 						disabled: isClientCabinet,
 						allowBlank: false,
-						style: {						//Style moved from description field Update 11.2019
-							paddingBottom: '20px',
-							marginBottom: '10px',
-							borderBottom: '1px solid #cccccc'
-						}
-					}, /*{
-						xtype: 'textfield',
-						maxLength: 32,
-						fieldLabel: 'Nature entité',
-						name: 'description',
-						msgTarget: 'qtip',
-						allowBlank: false,
-						style: {
-							paddingBottom: '20px',
-							marginBottom: '10px',
-							borderBottom: '1px solid #cccccc'
-						}
-					}*/, {
+					}, {
 						xtype: 'label',
 						text: 'Adresse - Commune'
 					}, {
@@ -226,31 +209,7 @@ Ext.define('MaParoisse.view.Customer', {
 						allowBlank: false,
 						msgTarget: 'qtip',
 						name: 'town',
-						/*style: { //removed Update 11.2019
-							paddingBottom: '20px',
-							marginBottom: '20px',
-							borderBottom: '1px solid #cccccc'
-						}*/
-					},/* {
-						xtype: 'textfield',		//removed Update 11.2019
-						maxLength: 20,
-						fieldLabel: 'Statut',
-						name: 'paroisseStatut',
-						msgTarget: 'qtip',
-						allowBlank: false
-					}, {
-						xtype: 'textfield',
-						fieldLabel: 'S\'il s\'agit d\'une annexe : Nom de paroisse de rattachement',
-						name: 'note'
-					}, {
-						xtype: 'textfield',
-						fieldLabel: 'Nom Doyenné',
-						name: 'paroisseDoyenne'
-					}, {
-						xtype: 'textfield',
-						fieldLabel: 'Nom Communauté de Paroisses',
-						name: 'paroisseContactPerson'
-					}*/]
+					}]
 				}],
 				listeners: {
 					scope: this,
@@ -266,6 +225,58 @@ Ext.define('MaParoisse.view.Customer', {
 //	               plugins: Ext.create('Ext.ux.statusbar.ValidationStatus', {form:'customerForm'})
 //	            })]
 		};
+		if(AccBureau.Context.principal['data']['appType'] == 'fabrique'){
+			config['items'][0]['items'][0]['fieldLabel'] = 'Code de la paroisse';
+			config['items'][0]['items'][1]['fieldLabel'] = 'Nom de la Paroisse (nom du saint, de la sainte)';
+			config['items'][0]['items'].splice(2,0, {//uncommented
+						xtype: 'textfield',
+						maxLength: 32,
+						fieldLabel: 'Nature entité',
+						name: 'description',
+						msgTarget: 'qtip',
+						allowBlank: false,
+						style: {
+							paddingBottom: '20px',
+							marginBottom: '10px',
+							borderBottom: '1px solid #cccccc'
+						}
+					});
+			config['items'][0]['items'][7]['style']= { //removed Update 11.2019
+				paddingBottom: '20px',
+				marginBottom: '20px',
+				borderBottom: '1px solid #cccccc'
+			}
+			config['items'][0]['items'].push({
+				xtype: 'textfield',		//removed Update 11.2019
+				maxLength: 20,
+				fieldLabel: 'Statut',
+				name: 'paroisseStatut',
+				msgTarget: 'qtip',
+				allowBlank: false
+			});
+			config['items'][0]['items'].push(
+			{
+				xtype: 'textfield',
+				fieldLabel: 'S\'il s\'agit d\'une annexe : Nom de paroisse de rattachement',
+				name: 'note'
+			});
+			config['items'][0]['items'].push({
+				xtype: 'textfield',
+				fieldLabel: 'Nom Doyenné',
+				name: 'paroisseDoyenne'
+			});
+			config['items'][0]['items'].push({
+				xtype: 'textfield',
+				fieldLabel: 'Nom Communauté de Paroisses',
+				name: 'paroisseContactPerson'
+			});
+		}else {
+			config['items'][0]['items'][1]['style']= {						//Style moved from description field Update 11.2019
+							paddingBottom: '20px',
+							marginBottom: '10px',
+							borderBottom: '1px solid #cccccc'
+						};
+		}
 		Ext.apply(this, config);
 
 		this.on('tenantChange', this.onTenantChanged, this);

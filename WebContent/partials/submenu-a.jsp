@@ -183,11 +183,23 @@
 					<span class="name">Bibliothèque</span>
 				</div>
 				</div>
+				<%
+				//statements added Update 11.2019
+				if(ap.getAppType().equals(AuthPrincipal.AppType.mense)){
+					%>
 				<div class="ae-subtile">
 					<div class="tile-content">
 						<span class="ae-description">Bibliothèque de la Communauté</span><!-- Remaned from "Bibliothèque de la Fabrique" to "Bibliothèque de la Communauté" Update 11.2019 -->
 					</div>
 				</div>
+				<%}else if(ap.getAppType().equals(AuthPrincipal.AppType.fabrique)){
+				%>
+				<div class="ae-subtile">
+					<div class="tile-content">
+						<span class="ae-description">Bibliothèque de la Fabrique</span><!-- Remaned from "Bibliothèque de la Fabrique" to "Bibliothèque de la Communauté" Update 11.2019 -->
+					</div>
+				</div>
+				<%} %>
 			</div>
 			<% }
 				

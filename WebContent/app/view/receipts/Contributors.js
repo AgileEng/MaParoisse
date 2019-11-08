@@ -167,7 +167,7 @@ Ext.define("MaParoisse.view.receipts.Contributors",{
     			store: new Ext.data.Store({
     				model: 'MaParoisse.model.Contributor',
     				autoDestroy: true,
-    				sorters: [{
+    				sorters: [{//Update 11.2019
     	                property: 'employeeLastName',
     	                direction: 'asc'
     	            },{
