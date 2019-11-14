@@ -49,6 +49,7 @@ Ext.define('MaParoisse.view.parametrages.UsersController', {
 			ds = view.getComponent('principalList').getStore(),
 			sm = view.getComponent('principalList').getSelectionModel();
     	
+    	
     	isExisting = false;
     	ds.each(function(existingPrincipal){
     		if(existingPrincipal.get('id') === principal.id){
@@ -346,7 +347,6 @@ Ext.define('MaParoisse.view.parametrages.UsersController', {
     	
     	view.currentPrincipal.set('companies', currentCustomers);
     	view.currentPrincipal.set('roles', currentRoles);
-    	
     	return view.currentPrincipal;
     },
     
@@ -366,7 +366,6 @@ Ext.define('MaParoisse.view.parametrages.UsersController', {
     		form.getComponent('generalFieldset').getComponent('password').setDisabled(false);
     		form.getComponent('generalFieldset').getComponent('confirmPassword').setDisabled(false);
     	}
-    	
     	centerPanel.setDisabled(false);
     	if(view.currentPrincipal.get('name').length > 0 && view.currentPrincipal.get('lastName').length > 0){
     		centerPanel.setTitle(view.currentPrincipal.get('name') + ' - ' + view.currentPrincipal.get('lastName'));
@@ -374,6 +373,8 @@ Ext.define('MaParoisse.view.parametrages.UsersController', {
     		centerPanel.setTitle('');
     	}
     	form.loadRecord(view.currentPrincipal);
+    	form.getComponent('generalFieldset').getComponent('appType').setValue(view.currentPrincipal.data.appType);
+
     	customersGrid.getStore().loadData(view.customers);
     	rolesGrid.getStore().loadData(view.roles);
     	
@@ -513,5 +514,13 @@ Ext.define('MaParoisse.view.parametrages.UsersController', {
     		}
     		found.commit();
     	}
+    },
+    
+    onAppTypeSelect: function(){
+    	var me = this,
+		view = me.getView(),
+		centerPanel = view.getComponent('centerPanel'),
+		form = centerPanel.getComponent('principalForm');
+    	view.currentPrincipal.set('appType', form.getComponent('generalFieldset').getComponent('appType').getValue());
     }
 });
