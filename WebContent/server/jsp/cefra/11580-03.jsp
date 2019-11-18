@@ -1,7 +1,7 @@
 <%@page import="eu.agileeng.domain.cefra.n11580_03.Cefra11580_03DataSource"%>
 
 <%@page import="eu.agileeng.util.AEMath"%>
-<%@page import="eu.agileeng.security.AuthPrincipal, eu.agileeng.util.http.HttpUtil" %>
+<%@page import="eu.agileeng.security.AuthPrincipal, eu.agileeng.util.http.HttpUtil, eu.agileeng.domain.contact.Organization" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 
     pageEncoding="UTF-8"%>
@@ -144,13 +144,13 @@
 
 					Monsieur le Curé et <%
 					//staement added Update 11.2019
-					if (ap.getAppType().equals(AuthPrincipal.AppType.fabrique)) { 
+					if (ap.getAppType().equals(Organization.AppType.fabrique)) { 
 						%>le Conseil de Fabrique<%
 					} %> vous remercient très chaleureusement pour votre soutien à <%
 					//statement added Update 11.2019
-					if (ap.getAppType().equals(AuthPrincipal.AppType.fabrique)) {
+					if (ap.getAppType().equals(Organization.AppType.fabrique)) {
 						%>votre Paroisse et<%
-					}else if (ap.getAppType().equals(AuthPrincipal.AppType.mense)){
+					}else if (ap.getAppType().equals(Organization.AppType.mense)){
 					%>La Communauté de Paroisse<%
 					} %> vous prient de trouver ci-dessous le reçu qui vous permettra de bénéficier d’une réduction d’impôt égale à 66 % du montant de votre don ; ce reçu doit être conservé pour pouvoir être présenté en cas de demande de l’Administration fiscale.
 
@@ -208,7 +208,7 @@
 
 					<p  style="margin-left: 4px; margin-right: 4px;">BENEFICIAIRE : <%=
 
-						ds.isCustomerParoisse() ? (ap.getAppType().equals(AuthPrincipal.AppType.fabrique) ? "Fabrique de la paroisse" : "La Communauté de Paroisse") : "Mense"%> <%=
+						ds.isCustomerParoisse() ? (ap.getAppType().equals(Organization.AppType.fabrique) ? "Fabrique de la paroisse" : "La Communauté de Paroisse") : "Mense"%> <%=
 
 						ds.getCustomerName() %>, <%=
 
@@ -249,13 +249,13 @@
 
 					<p style="margin-left: 4px; margin-right: 4px;">La <%
 					//statement added Update 11.2019
-					if (ap.getAppType().equals(AuthPrincipal.AppType.fabrique)){
+					if (ap.getAppType().equals(Organization.AppType.fabrique)){
 						%>Fabrique<%
-					}else if (ap.getAppType().equals(AuthPrincipal.AppType.mense)){
+					}else if (ap.getAppType().equals(Organization.AppType.mense)){
 						%>Communauté de Paroisse<%
 					}%> d'Eglise <%
 					//statement added Update 11.2019
-					if(ap.getAppType().equals(AuthPrincipal.AppType.fabrique)) {
+					if(ap.getAppType().equals(Organization.AppType.fabrique)) {
 						%>(la Mense curiale)<%
 					}%> reconnaît avoir reçu à titre de don ouvrant droit à réduction d’impôt la somme de :</p>
 
@@ -315,18 +315,18 @@
 
 					Ce reçu est établi à partir d’un fichier informatique à l’usage exclusif de <%
 					//statement added Update 11.2019
-					if(ap.getAppType().equals(AuthPrincipal.AppType.fabrique)){
+					if(ap.getAppType().equals(Organization.AppType.fabrique)){
 						%>la Paroisse ou de la Mense curiale<%
-					} else if(ap.getAppType().equals(AuthPrincipal.AppType.mense)){
+					} else if(ap.getAppType().equals(Organization.AppType.mense)){
 						%>La Communauté de Paroisse<%
 					}
 					%>. En application des articles 39 et suivants de la loi du 6 janvier 1978 modifiée, vous bénéficiez d’un droit d’accès et de rectification aux informations qui vous concernent. Pour exercer ce droit vous devrez vous adresser au <%
-					if (ap.getAppType().equals(AuthPrincipal.AppType.fabrique)){
+					if (ap.getAppType().equals(Organization.AppType.fabrique)){
 						%>Président du Conseil de Fabrique de la Paroisse ou à<%
 					}%> Monsieur le Curé pour les reçus émis par <%
-					if (ap.getAppType().equals(AuthPrincipal.AppType.fabrique)){
+					if (ap.getAppType().equals(Organization.AppType.fabrique)){
 						%>la Mense curiale.<%
-					}else if (ap.getAppType().equals(AuthPrincipal.AppType.mense)){
+					}else if (ap.getAppType().equals(Organization.AppType.mense)){
 						%>La Communauté de Paroisse<%
 					}%>
 				</td>

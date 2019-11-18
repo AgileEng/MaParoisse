@@ -1,3 +1,4 @@
+<%@page import="eu.agileeng.domain.contact.Organization"%>
 <%@page import="eu.agileeng.security.AuthPermission"%>
 <%@page import="eu.agileeng.services.ServiceLocator.Services"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -185,14 +186,14 @@
 				</div>
 				<%
 				//statements added Update 11.2019
-				if(ap.getAppType().equals(AuthPrincipal.AppType.mense)){
+				if(ap.getAppType().equals(Organization.AppType.mense)){
 					%>
 				<div class="ae-subtile">
 					<div class="tile-content">
 						<span class="ae-description">Bibliothèque de la Communauté</span><!-- Remaned from "Bibliothèque de la Fabrique" to "Bibliothèque de la Communauté" Update 11.2019 -->
 					</div>
 				</div>
-				<%}else if(ap.getAppType().equals(AuthPrincipal.AppType.fabrique)){
+				<%}else if(ap.getAppType().equals(Organization.AppType.fabrique)){
 				%>
 				<div class="ae-subtile">
 					<div class="tile-content">

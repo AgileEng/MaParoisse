@@ -2,7 +2,7 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 
-     pageEncoding="UTF-8"%><%@page import="eu.agileeng.security.AuthPrincipal, eu.agileeng.util.http.HttpUtil, eu.agileeng.services.AEInvocationContext, eu.agileeng.services.imp.AEInvocationContextImp, eu.agileeng.services.AEInvocationContextValidator, eu.agileeng.services.auth.AuthAccessService, eu.agileeng.services.auth.AuthAccessValidator, eu.agileeng.services.ServiceLocator"%>
+     pageEncoding="UTF-8"%><%@page import="eu.agileeng.security.AuthPrincipal, eu.agileeng.util.http.HttpUtil, eu.agileeng.services.AEInvocationContext, eu.agileeng.services.imp.AEInvocationContextImp, eu.agileeng.services.AEInvocationContextValidator, eu.agileeng.services.auth.AuthAccessService, eu.agileeng.services.auth.AuthAccessValidator, eu.agileeng.services.ServiceLocator, eu.agileeng.domain.contact.Organization"%>
 
     <%@page import="org.apache.tomcat.util.json.JSONObject,org.apache.tomcat.util.json.JSONArray"%>
 
@@ -90,7 +90,7 @@
 
 
 			//statement added Update 11.2019
-			if (aav.checkPermission("350b4", invContext, true) && ap.getAppType().equals(AuthPrincipal.AppType.fabrique)) {
+			if (aav.checkPermission("350b4", invContext, true) && ap.getAppType().equals(Organization.AppType.fabrique)) {
 
 			%>
 
@@ -128,7 +128,7 @@
 
 			
 			//statement added Update 11.2019
-			if (aav.checkPermission("360b4", invContext, true) && ap.getAppType().equals(AuthPrincipal.AppType.fabrique)) {
+			if (aav.checkPermission("360b4", invContext, true) && ap.getAppType().equals(Organization.AppType.fabrique)) {
 
 			%>
 
@@ -1058,7 +1058,7 @@
 
 			<% } 
 
-			if (aav.checkPermission("580b4", invContext, true) && ap.getAppType().equals(AuthPrincipal.AppType.fabrique)) {
+			if (aav.checkPermission("580b4", invContext, true) && ap.getAppType().equals(Organization.AppType.fabrique)) {
 
 			%>
 
@@ -1196,7 +1196,7 @@
 				
 				<%
 				//statement added Update 11.2019
-				if(ap.getAppType().equals(AuthPrincipal.AppType.fabrique)){ %>
+				if(ap.getAppType().equals(Organization.AppType.fabrique)){ %>
 				<div class="ae-subtile">
 
 					<div class="tile-content">
@@ -1224,7 +1224,7 @@
 
 			<%
 			//statement added Update 11.2019
-			if (aav.checkPermission("620b4", invContext, true) && ap.getAppType().equals(AuthPrincipal.AppType.fabrique)) {
+			if (aav.checkPermission("620b4", invContext, true) && ap.getAppType().equals(Organization.AppType.fabrique)) {
 
 			%>
 
@@ -1285,7 +1285,7 @@
 				</div>
 			<%
 			//statement added Update 11.2019
-			if (ap.getAppType().equals(AuthPrincipal.AppType.fabrique)){
+			if (ap.getAppType().equals(Organization.AppType.fabrique)){
 			%>
 				<div class="ae-subtile">
 
@@ -1303,7 +1303,7 @@
 
 			
 			//statement added Update 11.2019
-			if (aav.checkPermission("640b4", invContext, true) && ap.getAppType().equals(AuthPrincipal.AppType.fabrique)) {
+			if (aav.checkPermission("640b4", invContext, true) && ap.getAppType().equals(Organization.AppType.fabrique)) {
 
 			%>
 
@@ -1459,7 +1459,7 @@
 
 		
 		//statement added Update 11.2019
-		if (aav.checkPermission("680b4", invContext, true) && ap.getAppType().equals(AuthPrincipal.AppType.fabrique)) {
+		if (aav.checkPermission("680b4", invContext, true) && ap.getAppType().equals(Organization.AppType.fabrique)) {
 
 		%>
 
@@ -1497,7 +1497,7 @@
 
 		
 		//statement added Update 11.2019
-		if (aav.checkPermission("690b4", invContext, true) && ap.getAppType().equals(AuthPrincipal.AppType.fabrique)) {
+		if (aav.checkPermission("690b4", invContext, true) && ap.getAppType().equals(Organization.AppType.fabrique)) {
 
 		%>
 
@@ -2429,7 +2429,7 @@
 
 		
 		//Statement added Update 11.2019
-		if (aav.checkPermission("910b4", invContext, true) && ap.getAppType().equals(AuthPrincipal.AppType.fabrique)) {
+		if (aav.checkPermission("910b4", invContext, true) && ap.getAppType().equals(Organization.AppType.fabrique)) {
 
 		%>
 
@@ -2566,7 +2566,7 @@
 			</div>
 			<%
 			//statement added Update 11.2019
-			if (ap.getAppType().equals(AuthPrincipal.AppType.fabrique)){
+			if (ap.getAppType().equals(Organization.AppType.fabrique)){
 			%>
 			<div class="ae-subtile">
 
@@ -2594,7 +2594,7 @@
 
 		<%
 		//statement added Update 11.2019
-		if (aav.checkPermission("950b4", invContext, true) && ap.getAppType().equals(AuthPrincipal.AppType.fabrique)) {
+		if (aav.checkPermission("950b4", invContext, true) && ap.getAppType().equals(Organization.AppType.fabrique)) {
 
 		%>
 
@@ -2655,7 +2655,7 @@
 			</div>
 			<%
 			//statement added Update 11.2019
-			if(ap.getAppType().equals(AuthPrincipal.AppType.fabrique)){
+			if(ap.getAppType().equals(Organization.AppType.fabrique)){
 			%>
 			<div class="ae-subtile">
 
@@ -2671,7 +2671,7 @@
 		
 		<%} 
 
-		if (aav.checkPermission("970b4", invContext, true) && ap.getAppType().equals(AuthPrincipal.AppType.fabrique)) {
+		if (aav.checkPermission("970b4", invContext, true) && ap.getAppType().equals(Organization.AppType.fabrique)) {
 
 		%>
 
@@ -3835,7 +3835,7 @@
 
 			<% }
 
-			if (aav.checkPermission("205b3", invContext, true) && ap.getAppType().equals(AuthPrincipal.AppType.fabrique)) {
+			if (aav.checkPermission("205b3", invContext, true) && ap.getAppType().equals(Organization.AppType.fabrique)) {
 
 				%>
 
@@ -4303,7 +4303,7 @@
 
 			
 
-			if (aav.checkPermission("280b3", invContext, true) && ap.getAppType().equals(AuthPrincipal.AppType.mense)) {
+			if (aav.checkPermission("280b3", invContext, true) && ap.getAppType().equals(Organization.AppType.mense)) {
 
 			%>
 
@@ -4337,7 +4337,7 @@
 
 			</div>
 
-			<% } else if (aav.checkPermission("280b3", invContext, true) && ap.getAppType().equals(AuthPrincipal.AppType.fabrique)) {
+			<% } else if (aav.checkPermission("280b3", invContext, true) && ap.getAppType().equals(Organization.AppType.fabrique)) {
 				%>
 
 				<div class="tile double bg-darkCobalt" data-ae-module="280b3">
