@@ -111,6 +111,28 @@ Ext.define('MaParoisse.lib.Globals', {
 			type: {type: '30',code: ''}
 		}],
 		
+		queteCodesMense: [{
+			name: 'Sans choix',
+			code: '',
+			type: {type: '30',code: ''}
+		}, {
+			name: 'Taxes mariages et enterrements, confirmations, dispenses…',
+			code: '14',
+			type: {type: '30',code: ''}
+		}, {
+			name: '% sur quêtes de mariages et enterrements réalisés au cours de l’année courante',
+			code: '16',
+			type: {type: '30',code: ''}
+		}, {
+			name: 'Prélèvements sur messes versés par la paroisse',
+			code: '20',
+			type: {type: '30',code: ''}
+		}, {
+			name: 'Honoraires de messes à faire célébrer',
+			code: '22',
+			type: {type: '30',code: ''}
+		}],
+		
 		accIdentificationRules: {
 			NA: 0,
 			EXPENSE: 6,       
