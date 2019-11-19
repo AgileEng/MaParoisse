@@ -28,7 +28,7 @@ Ext.define('MaParoisse.view.saisir.BankJournalFilterTab', {
 		
 		//this module requires only bank journals
 		var filteredJournals = [];
-		for (i=0; i < me.accJournals.length; i++){
+		for (var i=0; i < me.accJournals.length; i++){
 			if (me.accJournals[i].paymentMethodId == '20'){
 				filteredJournals.push(me.accJournals[i]);
 			}

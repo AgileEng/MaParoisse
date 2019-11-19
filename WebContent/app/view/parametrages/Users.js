@@ -168,8 +168,17 @@ Ext.define("MaParoisse.view.parametrages.Users",{
         					allowBlank: false,
         					itemId: 'appType',
         					store: Ext.create(Ext.data.Store,{
-        						fields : ['value', 'text'],
-        						data : [{"value": "fabrique", "text":"Fabrique"},{"value": "mense", "text": "Mense"}]
+        						fields : [
+        						          'value', 
+        						          'text'
+        						],
+        						data : [{
+        							"value": "fabrique",
+        							"text": "Fabrique"
+        							},{
+        							"value": "mense", 
+        							"text": "Mense"
+        						}]
         					}),
         					valueField : 'value',
         					displayField : 'text',

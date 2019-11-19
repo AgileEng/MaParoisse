@@ -373,7 +373,6 @@ Ext.define('MaParoisse.view.parametrages.UsersController', {
     		centerPanel.setTitle('');
     	}
     	form.loadRecord(view.currentPrincipal);
-    	form.getComponent('generalFieldset').getComponent('appType').setValue(view.currentPrincipal.data.appType);
 
     	customersGrid.getStore().loadData(view.customers);
     	rolesGrid.getStore().loadData(view.roles);
@@ -400,7 +399,9 @@ Ext.define('MaParoisse.view.parametrages.UsersController', {
     
     loadSelectedPrincipal:function(principal){
     	var me = this,
-    		view = me.getView();
+    		view = me.getView(),
+    		centerPanel = view.getComponent('centerPanel'),
+    		form = centerPanel.getComponent('principalForm');
     	var req = Ext.create('MaParoisse.lib.JsonRPC', {
 			url: '/AccBureau',
 			service_type: 'AccBureauService',
@@ -413,7 +414,7 @@ Ext.define('MaParoisse.view.parametrages.UsersController', {
 					view.currentPrincipal = Ext.create('MaParoisse.model.AuthPrincipal', resp.principal);
 					
 					me.updatePrincipalInView(true);
-					
+			    	form.getComponent('generalFieldset').getComponent('appType').setValue(view.currentPrincipal.data.appType);					
 				},
 				error: function () {}
 			}
@@ -426,6 +427,7 @@ Ext.define('MaParoisse.view.parametrages.UsersController', {
 			}
 		});
     	view.currentPrincipal = principal;
+    	form.getComponent('generalFieldset').getComponent('appType').setValue(view.currentPrincipal.data.appType);
     },
     
     loadInitialData: function(){

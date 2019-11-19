@@ -218,42 +218,6 @@ Ext.define('MaParoisse.view.parametrages.Conseil', {
 							vtype: 'email'
 						}
 //						renderer: 'recordValidationRenderer'
-					}, { 
-						hidden: true,//Update 11.2019
-						text: 'Date entrée au Conseil',
-						resizable: false,
-						xtype: 'datecolumn',
-						format: 'd/m/Y',
-						flex: 1,
-						dataIndex: 'entryDate',
-						editor: {
-							xtype: 'datefield',
-							format: 'd/m/Y'
-						}
-					}, {
-						hidden: true,//Update 11.2019
-						text: 'Date 1ère Election',
-						resizable: false,
-						xtype: 'datecolumn',
-						format: 'd/m/Y',
-						flex: 1,
-						dataIndex: 'firstElectionDate',
-						editor: {
-							xtype: 'datefield',
-							format: 'd/m/Y'
-						}
-					}, {
-						hidden: true,//Update 11.2019
-						text: 'Date prochain renouvellement',
-						resizable: false,
-						xtype: 'datecolumn',
-						format: 'd/m/Y',
-						flex: 1,
-						dataIndex: 'nextRenewalDate',
-						editor: {
-							xtype: 'datefield',
-							format: 'd/m/Y'
-						}
 					}],
 					validateRow: function (columnIndexes, record, y) {
 		    		    var me, view, errors;
@@ -449,46 +413,10 @@ Ext.define('MaParoisse.view.parametrages.Conseil', {
 							vtype: 'email'
 						}
 //						renderer: 'recordValidationRenderer'
-					}, {
-						//hidden: true,//Update 11.2019
-						text: 'Date entrée au Conseil', 
-						resizable: false,
-						xtype: 'datecolumn',
-						format: 'd/m/Y',
-						flex: 1,
-						dataIndex: 'entryDate',
-						editor: {
-							xtype: 'datefield',
-							format: 'd/m/Y'
-						}
-					}, {
-						hidden: true,//Update 11.2019
-						text: 'Date 1ère Election',
-						resizable: false,
-						xtype: 'datecolumn',
-						format: 'd/m/Y',
-						flex: 1,
-						dataIndex: 'firstElectionDate',
-						editor: {
-							xtype: 'datefield',
-							format: 'd/m/Y'
-						}
-					}, {
-						hidden: true,//Update 11.2019
-						text: 'Date prochain renouvellement',
-						resizable: false,
-						xtype: 'datecolumn',
-						format: 'd/m/Y',
-						flex: 1,
-						dataIndex: 'nextRenewalDate',
-						editor: {
-							xtype: 'datefield',
-							format: 'd/m/Y'
-						}
 					}],
 					validateRow: function (columnIndexes, record, y) {
 		    		    var me, view, errors;
-		    		
+		    		    debugger;
 		    		    me = this;
 		    		    view = me.getView();
 		    		
@@ -550,7 +478,7 @@ Ext.define('MaParoisse.view.parametrages.Conseil', {
 		    		        
 		    		    }
 		    		}
-				}, {
+				},{
 					hidden: true,//Update 11.2019
 			        xtype: 'fieldcontainer', 
 			        flex: .5,
@@ -581,7 +509,8 @@ Ext.define('MaParoisse.view.parametrages.Conseil', {
 					}]
 			    }]
 		};
-		if(AccBureau.Context.principal['data']['appType'] == 'fabrique'){
+		console.log(config);
+		if(AccBureau.Context.principal['data']['appType'] === 'fabrique'){
 			config['items'][0]['columns'][0]['renderer'] = function(value, metaData, record, rowIndex, colIndex, store, view){
 				switch(record.get('positionId')){
 					case 20:
@@ -598,14 +527,87 @@ Ext.define('MaParoisse.view.parametrages.Conseil', {
 						break;
 				}
 			};
-			config['items'][0]['columns'][8]['hidden'] = false;
-			config['items'][0]['columns'][9]['hidden'] = false;
-			config['items'][0]['columns'][10]['hidden'] = false;
+			config['items'][0]['columns'].push({ 
+						//hidden: true,//Update 11.2019
+						text: 'Date entrée au Conseil',
+						resizable: false,
+						xtype: 'datecolumn',
+						format: 'd/m/Y',
+						flex: 1,
+						dataIndex: 'entryDate',
+						editor: {
+							xtype: 'datefield',
+							format: 'd/m/Y'
+						}
+					});
+			config['items'][0]['columns'].push({
+						//hidden: true,//Update 11.2019
+						text: 'Date 1ère Election',
+						resizable: false,
+						xtype: 'datecolumn',
+						format: 'd/m/Y',
+						flex: 1,
+						dataIndex: 'firstElectionDate',
+						editor: {
+							xtype: 'datefield',
+							format: 'd/m/Y'
+						}
+					});
+			config['items'][0]['columns'].push({
+						//hidden: true,//Update 11.2019
+						text: 'Date prochain renouvellement',
+						resizable: false,
+						xtype: 'datecolumn',
+						format: 'd/m/Y',
+						flex: 1,
+						dataIndex: 'nextRenewalDate',
+						editor: {
+							xtype: 'datefield',
+							format: 'd/m/Y'
+						}
+					});
 			config['items'][1]['columns'][0]['hidden'] = false;
-			config['items'][1]['columns'][10]['hidden'] = false;
-			config['items'][1]['columns'][11]['hidden'] = false;
+			config['items'][1]['columns'].push( {
+						//hidden: true,//Update 11.2019
+						text: 'Date entrée au Conseil', 
+						resizable: false,
+						xtype: 'datecolumn',
+						format: 'd/m/Y',
+						flex: 1,
+						dataIndex: 'entryDate',
+						editor: {
+							xtype: 'datefield',
+							format: 'd/m/Y'
+						}
+					});
+			config['items'][1]['columns'].push( {
+				//hidden: true,//Update 11.2019
+				text: 'Date 1ère Election',
+				resizable: false,
+				xtype: 'datecolumn',
+				format: 'd/m/Y',
+				flex: 1,
+				dataIndex: 'firstElectionDate',
+				editor: {
+					xtype: 'datefield',
+					format: 'd/m/Y'
+				}
+			});
+			config['items'][1]['columns'].push({
+						//hidden: true,//Update 11.2019
+						text: 'Date prochain renouvellement',
+						resizable: false,
+						xtype: 'datecolumn',
+						format: 'd/m/Y',
+						flex: 1,
+						dataIndex: 'nextRenewalDate',
+						editor: {
+							xtype: 'datefield',
+							format: 'd/m/Y'
+						}
+					});
 			config['items'][2]['hidden'] = false;
-		}
+			}
 		Ext.apply(this, config);
 		this.callParent(arguments);
 	},
