@@ -416,7 +416,7 @@ Ext.define('MaParoisse.view.parametrages.Conseil', {
 					}],
 					validateRow: function (columnIndexes, record, y) {
 		    		    var me, view, errors;
-		    		    debugger;
+
 		    		    me = this;
 		    		    view = me.getView();
 		    		
@@ -509,7 +509,6 @@ Ext.define('MaParoisse.view.parametrages.Conseil', {
 					}]
 			    }]
 		};
-		console.log(config);
 		if(AccBureau.Context.principal['data']['appType'] === 'fabrique'){
 			config['items'][0]['columns'][0]['renderer'] = function(value, metaData, record, rowIndex, colIndex, store, view){
 				switch(record.get('positionId')){
