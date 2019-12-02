@@ -249,6 +249,12 @@ public class Accounting extends HttpServlet {
 					AEResponse aeResponse = accService.openAccPeriod(aeRequest, invContext);
 					aeResponse.toJSONObject().write(out);
 					out.flush();
+				} else if("AccService".equalsIgnoreCase(aeRequest.getServiceName()) 
+						&& "saveTip".equalsIgnoreCase(aeRequest.getMethod())) {
+
+					AEResponse aeResponse = accService.saveTip(aeRequest, invContext);
+					aeResponse.toJSONObject().write(out);
+					out.flush();
 				}
 			}
 		} catch (Exception e) {
