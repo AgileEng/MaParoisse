@@ -41,10 +41,62 @@ Ext.define('MaParoisse.view.main.Main', {
         								if(safe){
         									MaParoisse.app.getController('Root').setTenant(customer);
         								}
-        							})
+        							});
         						}
         					}).show();
         				}
+        		    },{
+        		    	text: 'Popup à l\'entrée',
+        		    	handler: function(){
+        					Ext.create('Ext.window.Window', {
+        						title:'popup à l\'entrée',
+        						modal: true,
+        						closable: true,
+        						autoShow: true,
+        						width: 735,
+        						height: 400,
+        						defaults: {
+        							margin: '15px 15px 15px 15px'
+        						},
+        						items: [{
+            		    			xtype: 'htmleditor',
+            						itemId: 'text',
+        							allowBlank: false,
+            					}],
+            					buttons:[{
+            						text: 'Oui',
+        							itemId: 'saveBtn',
+        							handler: function(btn){
+        								var window = btn.up('window'),
+        								textField = window.getComponent('text');
+        								
+        								if(textField.isValid()){
+        									var req = Ext.create('MaParoisse.lib.JsonRPC', {
+        										url: '/Accounting',
+        										service_type: 'AccService',
+        										listeners: {
+        											success: function () {
+        												//show success
+        												MaParoisse.plugin.notification.showSuccess(' ','succès');
+        												window.close();
+        											},
+        											error: function () {}
+        										}
+        									});
+        									
+        									req.request({
+        										method: 'saveTip',
+        										params: {
+        											tip: textField.getValue()
+        										}
+        									});
+        								} else {
+        									MaParoisse.plugin.notification.showError(' ','Erreur de validation');
+        								}
+        							}
+            					}],
+        					});
+        		    	}
         		    }, '-', {
         		        text: 'Changer le mot de passe',
         		        icon: null,
@@ -258,6 +310,32 @@ Ext.define('MaParoisse.view.main.Main', {
     	
     	Ext.apply(me, config);
     	me.callParent(arguments);
+    	
+    	/*console.log('onRender');
+    	var me = this;
+    	
+    	var req = Ext.create('MaParoisse.lib.JsonRPC', {
+			url: '/Accounting',
+			service_type: 'AccService',
+			listeners: {
+				success: function () {
+					//show success and load the server data 
+					MaParoisse.plugin.notification.showSuccess(' ','succès');
+					
+					var resp = arguments[0].BODY;
+					console.log(resp);
+				},
+				error: function () {}
+			}
+		});
+		
+		req.request({
+			method: 'loadTip',
+			params: {
+				
+			}
+		});
+    	*/
     },
     
     createDocGenWindow: function(dataAeModule){

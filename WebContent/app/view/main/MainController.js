@@ -12,7 +12,6 @@ Ext.define('MaParoisse.view.main.MainController', {
     alias: 'controller.main',
     
     onRender: function(c){
-    	
     	$(window).on('beforeunload', function(){
     		if(!Ext.getCmp('ae-viewport').getController().isSafeToCloseCurrentModule()){
         		return 'Vous vous apprêtez à quitter ce module sans sauvegarder. Les données saisies seront perdues. <br/><br/>Etes vous sur de vouloir poursuivre?';
@@ -21,6 +20,10 @@ Ext.define('MaParoisse.view.main.MainController', {
         	}
     	});
     },
+    
+	loadTipText: function(){
+		
+	},
     
     onBackButtonClick: function(){
     	//this.isSafeToCloseCurrentModule(this.doHistoryBack);
