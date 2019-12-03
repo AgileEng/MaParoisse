@@ -49,12 +49,36 @@ Ext.define('MaParoisse.view.main.Main', {
         		    	text: 'Popup à l\'entrée',
         		    	handler: function(){
         					Ext.create('Ext.window.Window', {
-        						title:'popup à l\'entrée',
+        						title:'Popup à l\'entrée',
         						modal: true,
         						closable: true,
         						autoShow: true,
         						width: 735,
-        						height: 400,
+        						beforeRender: function (){
+        					    	var me = this;
+        					    	
+        					    	var req = Ext.create('MaParoisse.lib.JsonRPC', {
+        								url: '/Accounting',
+        								service_type: 'AccService',
+        								listeners: {
+        									success: function () {
+        										//show success and load the server data 
+        										MaParoisse.plugin.notification.showSuccess(' ','succès');
+        										
+        										var resp = arguments[0].BODY;
+        										me.getComponent('text').setValue(resp.tip);
+        									},
+        									error: function () {}
+        								}
+        							});
+        							
+        							req.request({
+        								method: 'loadTip',
+        								params: {
+        									
+        								}
+        							});
+        						},
         						defaults: {
         							margin: '15px 15px 15px 15px'
         						},
@@ -62,8 +86,16 @@ Ext.define('MaParoisse.view.main.Main', {
             		    			xtype: 'htmleditor',
             						itemId: 'text',
         							allowBlank: false,
+            						height: 400
             					}],
             					buttons:[{
+            						text: 'Annuler',
+            						itemId: 'cancelBtn',
+            						handler: function(btn){
+        								var window = btn.up('window');
+        								window.close();
+            						}
+            					},{
             						text: 'Oui',
         							itemId: 'saveBtn',
         							handler: function(btn){
@@ -311,31 +343,6 @@ Ext.define('MaParoisse.view.main.Main', {
     	Ext.apply(me, config);
     	me.callParent(arguments);
     	
-    	/*console.log('onRender');
-    	var me = this;
-    	
-    	var req = Ext.create('MaParoisse.lib.JsonRPC', {
-			url: '/Accounting',
-			service_type: 'AccService',
-			listeners: {
-				success: function () {
-					//show success and load the server data 
-					MaParoisse.plugin.notification.showSuccess(' ','succès');
-					
-					var resp = arguments[0].BODY;
-					console.log(resp);
-				},
-				error: function () {}
-			}
-		});
-		
-		req.request({
-			method: 'loadTip',
-			params: {
-				
-			}
-		});
-    	*/
     },
     
     createDocGenWindow: function(dataAeModule){
