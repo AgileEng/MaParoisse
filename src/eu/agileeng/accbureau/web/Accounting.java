@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.apache.tomcat.util.json.JSONException;
+import org.apache.tomcat.util.json.JSONObject;
 
 import eu.agileeng.domain.AEException;
 import eu.agileeng.security.AuthPrincipal;
@@ -253,6 +254,13 @@ public class Accounting extends HttpServlet {
 						&& "saveTip".equalsIgnoreCase(aeRequest.getMethod())) {
 
 					AEResponse aeResponse = accService.saveTip(aeRequest, invContext);
+					aeResponse.toJSONObject().write(out);
+					out.flush();
+				} else if("AccService".equalsIgnoreCase(aeRequest.getServiceName()) 
+						&& "loadTip".equalsIgnoreCase(aeRequest.getMethod())) {
+
+					JSONObject payload = new JSONObject().put("tip", accService.loadTip());
+					AEResponse aeResponse = new AEResponse(payload);
 					aeResponse.toJSONObject().write(out);
 					out.flush();
 				}
