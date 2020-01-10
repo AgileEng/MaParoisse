@@ -121,9 +121,9 @@ Ext.define('MaParoisse.controller.Root', {
     
     updateHeader: function(company){
     	if(company){
-    		Ext.getElementById('paroisseTitle').textContent = 'Paroisse de ' + company.get('name');
+    		Ext.getElementById('paroisseTitle').textContent = (AccBureau.Context.principal.data.appType === 'mense' ? '' : 'Paroisse de ') + company.get('name');
     	} else if (AccBureau.Context.principal.data.companies.length == 1){
-    		Ext.getElementById('paroisseTitle').textContent = 'Paroisse de ' + AccBureau.Context.principal.data.companies[0].name;
+    		Ext.getElementById('paroisseTitle').textContent = (AccBureau.Context.principal.data.appType === 'mense' ? '' : 'Paroisse de ') + AccBureau.Context.principal.data.companies[0].name;
     		var company = new MaParoisse.model.util.Customer(AccBureau.Context.principal.data.companies[0]);
     		this.setTenant(company);
     	}
